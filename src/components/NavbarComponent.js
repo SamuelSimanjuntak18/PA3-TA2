@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './logo';
+
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
 
 export const NavbarComponent = () => {
@@ -7,8 +7,11 @@ export const NavbarComponent = () => {
     <Navbar variant="dark" expand="lg">
 
       <Container>
-
-        <Navbar.Brand href="#home"><strong> <Logo /> <br />BPBD TOBA</strong> </Navbar.Brand>
+      <div className="logo">
+       
+       <img className='logo' src="/assets/images/logo.PNG" alt="Logo Tidak ditemukan" />
+     </div>
+        <Navbar.Brand href="#home"><strong>  <br />BPBD TOBA</strong> </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

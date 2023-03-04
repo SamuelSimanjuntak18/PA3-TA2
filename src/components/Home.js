@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Weather = ({ city }) => {
+const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
@@ -35,4 +35,5 @@ const Weather = ({ city }) => {
   );
 };
 
-export default Weather;
+
+export default Home;
