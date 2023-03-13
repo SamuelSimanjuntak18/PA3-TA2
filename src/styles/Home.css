@@ -1,0 +1,56 @@
+.latar{
+    /* background-image: url('./public/assets/images/banjir.PNG'); */
+    background-image: url("./images/banjir.png");
+    background-size: cover;
+    background-position: center;
+     height: 500px; 
+    
+    }
+    
+    .tombol {
+        position: absolute;
+        width: 200px;
+        left: 300px;
+        height: 80px;
+        top: 300px;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: #FA0000;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        
+      }
+      .peringatan{
+        position: absolute;
+        width: 605px;
+        height: 48px;
+        left: 115px;
+        top: 170px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        color: #FFF50B;
+
+      }
+      .warnings
+      {
+         position: absolute;
+        width: 412px;
+        height: 19px;
+        left: 200px;
+        top: 236px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        text-align: center;
+
+      }
+      
+       
+        

@@ -41,7 +41,7 @@ export const NavbarComponent = () => {
                 Bencana Sosial
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#login">Masuk</Nav.Link>
+            <Nav.Link href="login">Masuk</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

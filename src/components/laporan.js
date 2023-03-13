@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./Form.css";
+import '../styles/Form.css';
 
 function Form() {
-  const [name, setName] = useState("Nama");
+  const [name, setName] = useState("Nama Anda");
   const [deskripsi, setDeskripsi] = useState("Deskripsi");
-  const [number, setNumber] = useState("082274335745");
+  const [number, setNumber] = useState("Nomor Telepon Aktif");
   const [option, setOption] = useState("Bencana");
 
   const handleSubmit = (event) => {
@@ -29,7 +29,7 @@ function Form() {
             onChange={(event) => setOption(event.target.value)}
             required
           >
-            <option value="option1">Pilih Bencana Alam</option>
+            <option value="option1">Bencana Alam</option>
             <option value="option2">Bencana Non Alam</option>
             <option value="option3">Bencana Sosial </option>
           </select>

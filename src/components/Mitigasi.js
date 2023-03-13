@@ -5,6 +5,7 @@ import { CardGroup } from 'react-bootstrap';
 function Mitigasi() {
  
     return (
+      <>
       <CardGroup>
         <Card>
           <Card.Img variant="top" src="/assets/images/logo.PNG" />
@@ -47,6 +48,7 @@ function Mitigasi() {
           </Card.Footer>
         </Card>
       </CardGroup>
+      </>
   );
 }
 
