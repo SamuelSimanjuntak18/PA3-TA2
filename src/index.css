@@ -24,8 +24,8 @@ font-family: 'Roboto', sans-serif;
     width:  45px;
     height: 45px;
     background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .warning {
@@ -103,5 +103,81 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #3e8e41;
+}
+
+.hero {
+  height: 390px;
+  overflow: hidden;
+}
+
+.hero-image {
+  z-index: 9;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero::after{
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  content: "";
+  opacity: 30%;
+}
+
+.hero-container {
+  z-index: 20;
+  color: #fff;
+}
+
+.btn-custom-danger {
+  background-color: #FA0000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 220px;
+  height: 64px;
+  font-size: 24px;
+}
+
+.text-hero {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFF50B;
+}
+
+.subtext-hero{
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+}
+
+.peringatan-dini {
+  width: 475px;
+  height: 270px;
+  border-radius: 15px;
+  background-color: #FE9705;
+}
+
+.warning-icon {
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.hr-peringatan {
+  border: 3px solid #fff;
+  opacity: 100%;
 }
 
