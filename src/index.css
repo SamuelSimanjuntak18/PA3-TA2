@@ -181,3 +181,6 @@ button[type="submit"]:hover {
   opacity: 100%;
 }
 
+.box-pemetaan {
+  border-radius: 15px;
+}

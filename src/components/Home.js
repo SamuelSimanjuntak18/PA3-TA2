@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from 'assets/images/banjir.jpg';
+import PemetaanMaps from './PemetaanMaps';
 
 const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -58,6 +59,13 @@ const Home = ({ city }) => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="container mt-5 mb-5">
+        <div className="row">
+          <div className="col-md-7">
+            <PemetaanMaps />
           </div>
         </div>
       </div>
