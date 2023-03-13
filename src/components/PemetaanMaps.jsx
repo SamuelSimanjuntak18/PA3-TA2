@@ -1,13 +1,12 @@
 import GoogleMapReact from "google-map-react";
 import { useState } from "react";
 
-const Marker = ({ text }) => {
+const Marker = ({ desa, jenis_bencana }) => {
   const [modal, setModal] = useState(false);
 
   const handleClick = () => {
     setModal(!modal);
   };
-  
 
   return (
     <div
@@ -20,13 +19,29 @@ const Marker = ({ text }) => {
         height: "10px",
       }}
     >
-      <span className="text-white fw-bold">{text}</span>
+      <span
+        className="text-white fw-bold position-absolute"
+        style={{ width: "30px" }}
+      >
+        {desa}
+      </span>
       {modal && (
         <div
-          className="position-absolute bg-success"
-          style={{ width: "200px", height: "75px", 'padding': '10px' }}
+          className="position-absolute bg-white text-start"
+          style={{ width: "250px", height: "initial", padding: "10px" }}
         >
-          <p className="text-white fw-bold">{text} <br/> Gempa Bumi</p>
+          <img
+            src="https://awsimages.detik.net.id/community/media/visual/2018/11/30/c668919c-a1e7-4f89-a06c-d9627861d5a3_169.jpeg?w=700&q=90"
+            alt=""
+            srcset=""
+            className="w-100"
+          />
+          <p className="fw-bold m-0 mt-2" style={{ fontSize: "18px" }}>
+            {desa}
+          </p>
+          <p className="fw-medium m-0" style={{ fontSize: "14px" }}>
+            {jenis_bencana}
+          </p>
         </div>
       )}
     </div>
@@ -36,31 +51,78 @@ const Marker = ({ text }) => {
 function PemetaanMaps() {
   const defaultProps = {
     center: {
-      lat: 3.5952,
-      lng: 98.6722,
+      lat: 2.3357,
+      lng: 99.0534,
     },
     zoom: 11,
   };
 
-  const northSumatraCoordinates = [
-    { city: "Medan", latitude: 3.5952, longitude: 98.6722 },
-    { city: "Pematang Siantar", latitude: 2.9611, longitude: 99.0686 },
-    { city: "Tebing Tinggi", latitude: 3.3263, longitude: 99.1555 },
-    { city: "Binjai", latitude: 3.6001, longitude: 98.4842 },
-    { city: "Lake Toba", latitude: 2.6211, longitude: 98.7878 },
-    { city: "Sipiso-piso waterfall", latitude: 2.8525, longitude: 98.7661 },
+  const tobaCoordinates = [
+    {
+      desa: "Parsaoran",
+      kecamatan: "Ajibata",
+      longitude: 98.93466667,
+      latitude: 2.65511111,
+      jenis_bencana: "Banjir",
+    },
+    {
+      desa: "Motung",
+      kecamatan: "Ajibata",
+      longitude: 98.93266667,
+      latitude: 2.64891667,
+      jenis_bencana: "Banjir",
+    },
+    {
+      desa: "Motung",
+      kecamatan: "Ajibata",
+      longitude: 98.93266667,
+      latitude: 2.64891667,
+      jenis_bencana: "Banjir",
+    },
+    {
+      desa: "Sigapiton",
+      kecamatan: "Ajibata",
+      longitude: 98.94361111,
+      latitude: 2.58580556,
+      jenis_bencana: "Rawan Longsor",
+    },
+    {
+      desa: "Pardamean",
+      kecamatan: "Ajibata",
+      longitude: 98.94361111,
+      latitude: 2.58580556,
+      jenis_bencana: "Rawan Longsor",
+    },
+    {
+      desa: "Siboruan",
+      kecamatan: "Balige",
+      longitude: 99.07758333,
+      latitude: 2.29769444,
+      jenis_bencana: "Rawan Longsor",
+    },
+    {
+      desa: "Siboruon",
+      kecamatan: "Balige",
+      longitude: 99.07268917,
+      latitude: 2.30781667,
+      jenis_bencana: "Rawan Longsor",
+    },
   ];
-  
 
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "350px", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyALHLAlODIkPH9o3Pc2q2-agNaN7L-ytao" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        { northSumatraCoordinates.map((el, index) => (
-          <Marker lat={el.latitude} lng={el.longitude} text={el.city} />
+        {tobaCoordinates.map((el, index) => (
+          <Marker
+            lat={el.latitude}
+            lng={el.longitude}
+            desa={el.desa}
+            jenis_bencana={el.jenis_bencana}
+          />
         ))}
       </GoogleMapReact>
     </div>
