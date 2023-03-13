@@ -1,17 +1,14 @@
-import React from "react";
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
+import React from 'react';
+import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
 
 export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <strong>
-            {" "}
-            <br />
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <div className="logo">
               <center>
-                {" "}
                 <img
                   className="logo"
                   src="/assets/images/logo.PNG"
@@ -19,16 +16,20 @@ export const NavbarComponent = () => {
                 />
               </center>
             </div>
-            Badan Penanggulangan Bencana Daerah
-            <br /> Kabupaten Toba
-          </strong>{" "}
+            <div className="text m ms-3">
+              <p className="mb-0 brand-bold">
+                Badan Penanggulangan Bencana Daerah
+              </p>
+              <p className="brand-regular mb-0">Kabupaten Toba</p>
+            </div>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
-            <Nav.Link href="#Mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="#laporan">Laporan</Nav.Link>
+            <Nav.Link href="mitigasi">Mitigasi Bencana</Nav.Link>
+            <Nav.Link href="laporan">Laporan</Nav.Link>
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam

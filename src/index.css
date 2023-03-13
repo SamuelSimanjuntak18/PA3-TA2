@@ -4,26 +4,32 @@ font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .navbar{
   background-color: #0255A5;
-  height: 135px;
+  height: 75px;
   font-family: 'Roboto', sans-serif;
-  font-size: large;
-  
 }
+
+.brand-bold {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.brand-regular {
+  font-size: 14px;
+}
+
 .logo{
-  position: relative;
-    float: left;
-    width:  100px;
-    height: 100px;
+    width:  45px;
+    height: 45px;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
-  
 }
+
 .warning {
   border: 1px solid #ccc;
-  width: 1400px;
   height: 140px;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0,0,0,0.1);
