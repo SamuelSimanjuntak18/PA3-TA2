@@ -1,18 +1,16 @@
 .form-group {
     margin-bottom: 1rem;
     text-align: left;
+  
   }
   
   label {
     display: block;
     margin-bottom: 0.5rem;
   }
-  .garis{
-    border: none;
-    border-top: 5px solid black;
-  }
+  
   input[type="text"],
-  input[type="deskripsi"],
+  input[type="email"],
   input[type="number"],
   input[type="location"],
   select,
@@ -29,6 +27,7 @@
   button[type="submit"] {
     display: block;
     margin-left: 90%;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     background-color: #0B8F00;
@@ -38,19 +37,19 @@
     cursor: pointer;
   }
   
-  button[type="submit"]:hover {
-    background-color: #0069d9;
+  button[type="submit"]:hover 
+  {
+    background-color: #0B8F00;
   }
   
   fieldset {
-    border: 2px solid #ccc;
-    box-shadow: 10cap;
+    border: 1px solid #ccc;
     border-radius: 0.25rem;
     padding: 1rem;
     margin-bottom: 1rem;
   }
   
   legend {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     
   }

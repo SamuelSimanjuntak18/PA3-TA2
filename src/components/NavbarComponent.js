@@ -5,7 +5,7 @@ export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <strong>
             {" "}
             <br />
@@ -19,16 +19,16 @@ export const NavbarComponent = () => {
                 />
               </center>
             </div>
-            Badan Penanggulangan Bencana Daerah
-            <br /> Kabupaten Toba
+            <strong>Badan Penanggulangan Bencana Daerah</strong>
+            <br /> <h5>Kabupaten Toba</h5>
           </strong>{" "}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
-            <Nav.Link href="#Mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="#laporan">Laporan</Nav.Link>
+            <Nav.Link href="Mitigasi">Mitigasi Bencana</Nav.Link>
+            <Nav.Link href="laporan">Laporan</Nav.Link>
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam
@@ -40,7 +40,7 @@ export const NavbarComponent = () => {
                 Bencana Sosial
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#login">Masuk</Nav.Link>
+            <Nav.Link href="login">Masuk</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

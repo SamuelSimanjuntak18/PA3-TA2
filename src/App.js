@@ -5,6 +5,8 @@ import { NavbarComponent } from './components/NavbarComponent';
 import Home from './components/Home';
 import Mitigasi from './components/Mitigasi';
 import laporan from './components/laporan';
+import login from './components/login';
+import register from './components/register';
 
 
 
@@ -21,6 +23,9 @@ function App() {
           <Route path="/" exact component={Home}   />
           <Route path="/Mitigasi" exact component={Mitigasi} />
           <Route path="/laporan" exact component={laporan} />
+          <Route path="/login" exact component={login} />
+          <Route path="/register" exact component={register} />
+          
           
         </div>
       </Switch>
