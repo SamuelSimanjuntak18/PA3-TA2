@@ -11,16 +11,17 @@ const Marker = ({ desa, jenis_bencana }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-danger position-relative"
+      className="position-relative"
       style={{
         padding: '10px',
         borderRadius: '100%',
         width: '10px',
         height: '10px',
+        backgroundColor: '#FA0000',
       }}
     >
       <span
-        className="text-white fw-bold position-absolute"
+        className="fw-medium position-absolute ms-3 text-marker"
         style={{ width: '30px' }}
       >
         {desa}
@@ -81,13 +82,6 @@ function PemetaanMaps() {
     },
     {
       desa: 'Sigapiton',
-      kecamatan: 'Ajibata',
-      longitude: 98.94361111,
-      latitude: 2.58580556,
-      jenis_bencana: 'Rawan Longsor',
-    },
-    {
-      desa: 'Pardamean',
       kecamatan: 'Ajibata',
       longitude: 98.94361111,
       latitude: 2.58580556,

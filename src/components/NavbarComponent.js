@@ -16,7 +16,7 @@ export const NavbarComponent = () => {
                 />
               </center>
             </div>
-            <div className="text m ms-3">
+            <div className="text m ms-3 text-start">
               <p className="mb-0 brand-bold">
                 Badan Penanggulangan Bencana Daerah
               </p>
