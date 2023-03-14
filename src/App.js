@@ -2,12 +2,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
-import Home from './components/Home';
-import Mitigasi from './components/Mitigasi';
-import laporan from './components/laporan';
-import PemetaanMaps from './components/PemetaanMaps';
-import login from './components/login';
+import Mitigasi from './pages/Mitigasi';
+import Home from './pages/Home';
+import login from './pages/login';
 import register from './components/register';
+import Report from 'pages/Report';
 
 function App() {
   return (
@@ -20,12 +19,9 @@ function App() {
           <div className="app-content">
             <Route path="/" exact component={Home} />
             <Route path="/Mitigasi" exact component={Mitigasi} />
-            <Route path="/laporan" exact component={laporan} />
+            <Route path="/laporan" exact component={Report} />
             <Route path="/login" exact component={login} />
             <Route path="/register" exact component={register} />
-            <Route path="/maps">
-              <PemetaanMaps />
-            </Route>
           </div>
         </Switch>
       </Router>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import '../styles/Form.css';
 
-function Form() {
-  const [name, setName] = useState("Nama Anda");
+function Report() {
+  const [name, setName] = useState("Nama");
   const [deskripsi, setDeskripsi] = useState("Deskripsi");
   const [number, setNumber] = useState("Nomor Telepon Aktif");
   const [option, setOption] = useState("Bencana");
@@ -75,4 +75,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Report;
