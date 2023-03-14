@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import { CardGroup } from 'react-bootstrap';
 
 function Mitigasi() {
- 
     return (
       <CardGroup>
         <Card>

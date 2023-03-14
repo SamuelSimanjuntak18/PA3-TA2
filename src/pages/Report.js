@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-function Form() {
+function Report() {
   const [name, setName] = useState("Nama");
   const [deskripsi, setDeskripsi] = useState("Deskripsi");
   const [number, setNumber] = useState("082274335745");
@@ -75,4 +75,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Report;

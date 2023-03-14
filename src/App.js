@@ -2,10 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
-import Home from './components/Home';
-import Mitigasi from './components/Mitigasi';
-import laporan from './components/laporan';
-import PemetaanMaps from './components/PemetaanMaps';
+import Report from './pages/Report';
+import Mitigasi from './pages/Mitigasi';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -18,10 +17,7 @@ function App() {
           <div className="app-content">
             <Route path="/" exact component={Home} />
             <Route path="/Mitigasi" exact component={Mitigasi} />
-            <Route path="/laporan" exact component={laporan} />
-            <Route path="/maps">
-              <PemetaanMaps />
-            </Route>
+            <Route path="/laporan" exact component={Report} />
           </div>
         </Switch>
       </Router>
