@@ -5,8 +5,8 @@ import { NavbarComponent } from './components/NavbarComponent';
 import Mitigasi from './pages/Mitigasi';
 import Home from './pages/Home';
 import login from './pages/login';
-import register from './components/register';
 import Report from 'pages/Report';
+import Register from 'pages/register';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path="/Mitigasi" exact component={Mitigasi} />
             <Route path="/laporan" exact component={Report} />
             <Route path="/login" exact component={login} />
-            <Route path="/register" exact component={register} />
+            <Route path="/register" exact component={Register} />
           </div>
         </Switch>
       </Router>
