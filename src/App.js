@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
 import Mitigasi from './pages/Mitigasi';
 import Home from './pages/Home';
-import login from './components/login';
+import login from './pages/login';
 import register from './components/register';
 import Report from 'pages/Report';
 
