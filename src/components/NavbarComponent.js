@@ -16,7 +16,7 @@ export const NavbarComponent = () => {
                 />
               </center>
             </div>
-            <div className="text m ms-3">
+            <div className="text m ms-3 text-start">
               <p className="mb-0 brand-bold">
                 Badan Penanggulangan Bencana Daerah
               </p>
@@ -41,7 +41,7 @@ export const NavbarComponent = () => {
                 Bencana Sosial
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#login">Masuk</Nav.Link>
+            <Nav.Link href="login">Masuk</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

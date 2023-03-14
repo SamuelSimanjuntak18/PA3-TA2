@@ -12,9 +12,12 @@ function PemetaanMaps() {
   };
 
   return (
-    <div style={{ height: "350px", width: "100%" }}>
+    <div
+      className="box-pemetaan overflow-hidden"
+      style={{ height: '350px', width: '100%' }}
+    >
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyALHLAlODIkPH9o3Pc2q2-agNaN7L-ytao" }}
+        bootstrapURLKeys={{ key: 'AIzaSyALHLAlODIkPH9o3Pc2q2-agNaN7L-ytao' }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
