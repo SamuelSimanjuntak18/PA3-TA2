@@ -11,7 +11,7 @@ export const NavbarComponent = () => {
               <center>
                 <img
                   className="logo"
-                  src="/assets/images/logo.PNG"
+                  src="../assets/images/logo.PNG"
                   alt="Logo Tidak ditemukan"
                 />
               </center>
@@ -29,7 +29,7 @@ export const NavbarComponent = () => {
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="laporan">Laporan</Nav.Link>
+            <Nav.Link href="Report">Laporan</Nav.Link>
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam
