@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from 'assets/images/banjir.jpg';
-import PemetaanMaps from './PemetaanMaps';
+import PemetaanMaps from 'components/PemetaanMaps';
 
 const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -18,12 +18,6 @@ const Home = ({ city }) => {
     fetchData();
   }, [city]);
 
-  if (!weatherData) {
-    return <div>Loading...</div>;
-  }
-
-  const { main, description, icon } = weatherData.weather[0];
-  const temperature = weatherData.main.temp;
 
   return (
     <div>
@@ -37,7 +31,7 @@ const Home = ({ city }) => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <button className="btn-custom-danger">
-                <b>LAPOR!</b>
+              <a href="/Report"  style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
               </button>
             </div>
             <div className="col-md-6">
@@ -69,16 +63,7 @@ const Home = ({ city }) => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <h2>{city}</h2>
-        <p>{main}</p>
-        <p>{description}</p>
-        <p>{temperature} &deg;C</p>
-        <img
-          src={`http://openweathermap.org/img/w/${icon}.png`}
-          alt={description}
-        />
-      </div> */}
+     
     </div>
   );
 };

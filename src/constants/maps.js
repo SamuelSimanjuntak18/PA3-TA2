@@ -11,6 +11,7 @@ const tobaCoordinates = [{
         longitude: 98.93266667,
         latitude: 2.64891667,
         jenis_bencana: "Banjir",
+       
     },
     {
         desa: "Motung",
@@ -39,6 +40,7 @@ const tobaCoordinates = [{
         longitude: 99.07758333,
         latitude: 2.29769444,
         jenis_bencana: "Rawan Longsor",
+        
     },
     {
         desa: "Siboruon",

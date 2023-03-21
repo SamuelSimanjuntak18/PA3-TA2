@@ -1,12 +1,12 @@
-import React from 'react';
-import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
+import React from "react";
+import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 
 export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: "flex", alignItems: "center" }}>
             <div className="logo">
               <center>
                 <img
@@ -29,7 +29,7 @@ export const NavbarComponent = () => {
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="laporan">Laporan</Nav.Link>
+            <Nav.Link href="Report">Lapor</Nav.Link>
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam

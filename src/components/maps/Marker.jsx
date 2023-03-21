@@ -41,6 +41,7 @@ const Marker = ({ desa, jenis_bencana }) => {
           <p className="fw-medium m-0" style={{ fontSize: "14px" }}>
             {jenis_bencana}
           </p>
+          
         </div>
       )}
     </div>

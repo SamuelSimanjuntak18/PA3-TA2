@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import '../styles/Form.css';
+import '../styles/Report.css';
+
 
 function Report() {
-  const [name, setName] = useState("Nama");
-  const [deskripsi, setDeskripsi] = useState("Deskripsi");
-  const [number, setNumber] = useState("Nomor Telepon Aktif");
+  // const [name, setName] = useState("Nama");
+  // const [deskripsi, setDeskripsi] = useState("Deskripsi");
+  // const [number, setNumber] = useState("Nomor Telepon Aktif");
   const [option, setOption] = useState("Bencana");
 
   const handleSubmit = (event) => {
@@ -15,7 +16,8 @@ function Report() {
   const handleAvatarChange = (event) => {};
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="report">
+      <form onSubmit={handleSubmit} style={{paddingBottom : "100px"}}>
       <fieldset>
         <legend>FORM PELAPORAN</legend>
         Jika anda ingin melaporkan berita terjadinya bencana alam, Silakan
@@ -39,8 +41,8 @@ function Report() {
           <input
             type="text"
             id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            placeholder="Lokasi Bencana"
+            // onChange={(event) => setName(event.target.value)}
             required
           />
         </div>
@@ -49,8 +51,9 @@ function Report() {
           <textarea
             type="deskripsi"
             id="deskripsi"
-            value={deskripsi}
-            onChange={(event) => setDeskripsi(event.target.value)}
+            // value={deskripsi}
+            placeholder="Deskripsi Bencana"
+            // onChange={(event) => setDeskripsi(event.target.value)}
             required
           />
         </div>
@@ -59,8 +62,8 @@ function Report() {
           <input
             type="text"
             id="number"
-            value={number}
-            onChange={(event) => setNumber(event.target.value)}
+            placeholder="Nomor Telepon Aktif"
+            // onChange={(event) => setNumber(event.target.value)}
             required
           />
         </div>
@@ -72,7 +75,15 @@ function Report() {
         <button type="submit">Submit</button>
       </fieldset>
     </form>
+
+    <div>
+
+    </div>
+    </div>
+
   );
+
+  
 }
 
 export default Report;

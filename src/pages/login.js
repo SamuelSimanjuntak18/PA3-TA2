@@ -4,7 +4,7 @@ import '../styles/login.css';
 
 function Login() {
   const [username, setUsername] = useState("samuelsimanjuntak195@gmail.com");
-  const [password, setPassword] = useState("awawaw");
+  const [password, setPassword] = useState("123456s");
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -16,7 +16,6 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // cek  login
   };
 
   return (

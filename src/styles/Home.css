@@ -1,11 +1,4 @@
-.latar{
-    /* background-image: url('./public/assets/images/banjir.PNG'); */
-    background-image: url("./images/banjir.png");
-    background-size: cover;
-    background-position: center;
-     height: 500px; 
-    
-    }
+
     
     .tombol {
         position: absolute;
