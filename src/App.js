@@ -5,7 +5,7 @@ import { NavbarComponent } from './components/NavbarComponent';
 import Mitigasi from './pages/Mitigasi';
 import Home from './pages/Home';
 import login from './pages/login';
-import register from './components/register';
+import register from './pages/register';
 import Report from 'pages/Report';
 
 function App() {
