@@ -2,6 +2,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+
 import Mitigasi from './pages/Mitigasi';
 import Home from './pages/Home';
 import login from './pages/login';
@@ -28,10 +33,12 @@ function App() {
         <div className=' box-button-urgent'>
           <div className='d-flex flex-column gap-3'>
             <div className='button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6'>
-              Lapor
+            <FontAwesomeIcon icon={faEnvelope} />
+
             </div>
             <div className='button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6'>
-              Call
+            <FontAwesomeIcon icon={faPhoneVolume} />
+              
             </div>
           </div>
         </div>

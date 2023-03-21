@@ -5,6 +5,7 @@ import MitigasiBencana from '../assets/images/mitigasi bencana.png';
 import EdukasiGempa from '../assets/images/edukasi gempa.png';
 import PeringatanDini from '../assets/images/peringatan dini.png'
 
+
 import '../styles/mitigasi.css';
 import Footer from "../components/Footer";
 function Mitigasi() {
