@@ -51,6 +51,33 @@
         text-align: center;
 
       }
+      @media screen and (max-width: 600px) {
+        .btn-custom-danger {
+          background-color: #FA0000;
+          color: #fff;
+          border: none;
+          border-radius: 10px;
+          width: 150px;
+          height: 50px;
+          font-size: 24px;
+        }
+
+        .peringatan-dini {
+          display: inline;
+          margin-top: 20px;
+        }
+        
+        .peringatan-dini-hero {
+          display: none;
+        }
       
+        .left-hero h1 {
+          font-size: 24px;
+        }
+      
+        .left-hero .subtext-hero {
+          font-size: 18px;
+        }
+      }     
        
         
