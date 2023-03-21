@@ -1,3 +1,4 @@
+import React from "react";
 import GoogleMapReact from "google-map-react";
 import { tobaCoordinates } from "../constants/maps";
 import Marker from "./maps/Marker";

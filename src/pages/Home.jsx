@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-import BanjirImage from 'assets/images/banjir.jpg';
-import PemetaanMaps from 'components/PemetaanMaps';
+import BanjirImage from '../assets/images/banjir.jpg';
+import PemetaanMaps from '../components/PemetaanMaps';
+import Footer from '../components/Footer';
 
 const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -64,6 +65,20 @@ const Home = ({ city }) => {
         </div>
       </div>
      
+      {/* <div className="container">
+        <h2>{city}</h2>
+        <p>{main}</p>
+        <p>{description}</p>
+        <p>{temperature} &deg;C</p>
+        <img
+          src={`http://openweathermap.org/img/w/${icon}.png`}
+          alt={description}
+        />
+      </div> */}
+
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

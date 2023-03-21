@@ -11,7 +11,7 @@ export const NavbarComponent = () => {
               <center>
                 <img
                   className="logo"
-                  src="/assets/images/logo.PNG"
+                  src="../assets/images/logo.PNG"
                   alt="Logo Tidak ditemukan"
                 />
               </center>

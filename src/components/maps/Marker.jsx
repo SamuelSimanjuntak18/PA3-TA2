@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 const Marker = ({ desa, jenis_bencana }) => {
