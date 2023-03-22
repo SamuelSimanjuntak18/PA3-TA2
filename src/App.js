@@ -10,7 +10,7 @@ import Home from './pages/Home';
 import login from './pages/login';
 import register from './pages/register';
 import Report from './pages/Report';
-import darurat from 'pages/darurat';
+import darurat from '../src/pages/darurat';
 
 
 function App() {
@@ -35,12 +35,10 @@ function App() {
         <div className=' box-button-urgent'>
           <div className='d-flex flex-column gap-3'>
             <div className='button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6'>
-            <FontAwesomeIcon icon={faEnvelope} />
-
+              <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div className='button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6'>
-            <FontAwesomeIcon icon={faPhoneVolume} />
-              
+              <FontAwesomeIcon icon={faPhoneVolume} />
             </div>
           </div>
         </div>

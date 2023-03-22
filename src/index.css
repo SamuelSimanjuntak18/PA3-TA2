@@ -1,11 +1,11 @@
 body {
   margin: 0;
-font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.navbar{
+.navbar {
   background-color: #0255A5;
   height: 75px;
   font-family: 'Roboto', sans-serif;
@@ -20,33 +20,34 @@ font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 
-.logo{
-    width:  45px;
-    height: 45px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.logo {
+  width: 45px;
+  height: 45px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .warning {
   border: 1px solid #ccc;
   height: 140px;
   border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   padding: 10px;
   position: absolute;
-  background-color:  #FFA500;
+  background-color: #FFA500;
 }
-  
 
-.icon{
 
-  width:  70px;
+.icon {
+
+  width: 70px;
   height: 100px;
   color: #FFFFFF;
- 
+
 }
-.date{
+
+.date {
   text-align: left;
 }
 
@@ -54,6 +55,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -107,7 +109,7 @@ button[type="submit"] {
   top: 0;
 }
 
-.hero::after{
+.hero::after {
   z-index: 10;
   position: absolute;
   left: 0;
@@ -140,7 +142,7 @@ button[type="submit"] {
   color: #FFF50B;
 }
 
-.subtext-hero{
+.subtext-hero {
   font-weight: 600;
   font-size: 16px;
 }
