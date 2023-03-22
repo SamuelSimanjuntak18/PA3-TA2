@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-
 import '../styles/Report.css';
-
-// import '../styles/Form.css';
 import Footer from "../components/Footer";
 
 function Report() {

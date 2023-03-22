@@ -1,11 +1,13 @@
 import React from "react";
+import login from "../apis/auth";
 import { useState } from "react";
 import '../styles/login.css';
 
 
 function Login() {
-  const [username, setUsername] = useState("samuelsimanjuntak195@gmail.com");
-  const [password, setPassword] = useState("123456s");
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -17,6 +19,8 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
+    const response = login({ email: username, password: password });
+    console.log(response);
   };
 
   return (
