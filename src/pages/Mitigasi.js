@@ -24,7 +24,6 @@ function Mitigasi() {
           </div>
         </div>
       </div>
-
       <div className='container mb-5 buku-panduan'>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col-md-3">
@@ -42,7 +41,6 @@ function Mitigasi() {
             <div class="card mx-auto">
               <img src={PeringatanDini} class="card-img-top" alt="..." />
               <div class="card-body">
-
                 <p class="card-text">Pentingnya Sistem Peringatan Dini Bencana</p>
               </div>
               <div class="card-footer">
@@ -74,16 +72,12 @@ function Mitigasi() {
           </div>
         </div>
       </div>
-
-
-
       <div className="container">
         <div className="row">
           <div className="col-lg-4 mb-4">
             <h5>VIDEO PANDUAN EDUKASI BENCANA</h5>
           </div>
         </div>
-
         <div className='container mb-5 buku-panduan'>
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col-md-3">
@@ -101,7 +95,6 @@ function Mitigasi() {
               <div class="card mx-auto">
                 <img src={PeringatanDini} class="card-img-top" alt="..." />
                 <div class="card-body">
-
                   <p class="card-text">Pentingnya Sistem Peringatan Dini Bencana</p>
                 </div>
                 <div class="card-footer">
@@ -134,59 +127,8 @@ function Mitigasi() {
           </div>
         </div>
       </div>
-
-
       <Footer />
-
     </div>
-
-
-
-    // <>
-    // <CardGroup>
-    //   <Card>
-    //     <Card.Img variant="top" src="/assets/images/logo.PNG" />
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This is a wider card with supporting text below as a natural lead-in
-    //         to additional content. This content is a little bit longer.
-    //       </Card.Text>
-    //     </Card.Body>
-    //     <Card.Footer>
-    //       <small className="text-muted">Last updated 3 mins ago</small>
-    //     </Card.Footer>
-    //   </Card>
-    //   <Card>
-    //     <Card.Img variant="top" src="/assets/images/logo.PNG" />
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This card has supporting text below as a natural lead-in to
-    //         additional content.{' '}
-    //       </Card.Text>
-    //     </Card.Body>
-    //     <Card.Footer>
-    //       <small className="text-muted">Last updated 3 mins ago</small>
-    //     </Card.Footer>
-    //   </Card>
-    //   <Card>
-    //     <Card.Img variant="top" src="/assets/images/logo.PNG" />
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This is a wider card with supporting text below as a natural lead-in
-    //         to additional content. This card has even longer content than the
-    //         first to show that equal height action.
-    //       </Card.Text>
-    //     </Card.Body>
-    //     <Card.Footer>
-    //       <small className="text-muted">Last updated 3 mins ago</small>
-    //     </Card.Footer>
-    //   </Card>
-    // </CardGroup>
-    // </>
-
   );
 }
 

@@ -97,35 +97,32 @@ const Register = () => {
               required
             />
           </div>
-          <div className="input-group"> 
+          <div className="input-group">
             <label htmlFor="password">Password</label>
-              <input
-                type={passwordShown ? "text" : "password"}
-                id="password"
-                name="password"
-                onChange={handleInputChange}
-                value={formData.password} 
-                required
-              />
-              <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblity} className="show-password-icon"/>
-            
+            <input
+              type={passwordShown ? "text" : "password"}
+              id="password"
+              name="password"
+              onChange={handleInputChange}
+              value={formData.password}
+              required
+            />
+            <FontAwesomeIcon icon={faEye} onClick={togglePasswordVisiblity} className="show-password-icon" />
           </div>
           <div className="input-group">
             <label htmlFor="confirmPassword">Konfirmasi Password</label>&nbsp;&nbsp;&nbsp;&nbsp;
-           
-              <input
-                type={confirmPasswordShown ? "text" : "password"}
-                id="confirmPassword"
-                name="confirmPassword"
-                onChange={handleInputChange}
-                value={formData.confirmPassword}
-                required
-              />
-              <FontAwesomeIcon
-                icon={faEye}
-                onClick={toggleConfirmPasswordVisiblity} className="show-password-icon"  />
-            </div>
-       
+            <input
+              type={confirmPasswordShown ? "text" : "password"}
+              id="confirmPassword"
+              name="confirmPassword"
+              onChange={handleInputChange}
+              value={formData.confirmPassword}
+              required
+            />
+            <FontAwesomeIcon
+              icon={faEye}
+              onClick={toggleConfirmPasswordVisiblity} className="show-password-icon" />
+          </div>
           <button type="submit">Register</button>
         </form>
       </div>

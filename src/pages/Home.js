@@ -32,7 +32,7 @@ const Home = ({ city }) => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <button className="btn-custom-danger">
-              <a href="/Report"  style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
+                <a href="/Report" style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
               </button>
             </div>
             <div className="col-md-6">
@@ -64,7 +64,7 @@ const Home = ({ city }) => {
           </div>
         </div>
       </div>
-     
+
       {/* <div className="container">
         <h2>{city}</h2>
         <p>{main}</p>

@@ -15,7 +15,7 @@
 
 .login-form h2 {
   margin-bottom: 2rem;
-  
+
 }
 
 .login-form label {
@@ -42,12 +42,13 @@
   cursor: pointer;
   margin-left: 3.5%;
 }
-.login-box{
-    width: 580px;
+
+.login-box {
+  width: 580px;
 }
-.tes{
-  
-    color: #7CC6F6;
-    font-Weight: bold;
-  }
-  
+
+.tes {
+
+  color: #7CC6F6;
+  font-Weight: bold;
+}
