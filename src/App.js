@@ -12,13 +12,14 @@ import register from './pages/register';
 import Report from './pages/Report';
 import darurat from 'pages/darurat';
 
+
 function App() {
   return (
     <div className="App">
+      <div className="app-header">
+        <NavbarComponent />
+      </div>
       <Router>
-        <div className="app-header">
-          <NavbarComponent />
-        </div>
         <Switch>
           <div className="app-content">
             <Route path="/" exact component={Home} />
@@ -28,6 +29,7 @@ function App() {
             <Route path="/register" exact component={register} />
             <Route path="/darurat" exact component={darurat} />
           </div>
+
         </Switch>
 
         <div className=' box-button-urgent'>

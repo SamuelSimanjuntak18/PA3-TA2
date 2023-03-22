@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col,Row } from 'react-bootstrap';
+import Footer from "../components/Footer";
 import "../styles/Report.css";
 
 function darurat() {
@@ -155,7 +156,7 @@ function darurat() {
         </Col>
         </Row>
       </div>
-      
+      <Footer/>
     </>
   );
 }
