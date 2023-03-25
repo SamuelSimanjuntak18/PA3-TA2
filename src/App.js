@@ -10,7 +10,8 @@ import Home from './pages/Home';
 import login from './pages/login';
 import register from './pages/register';
 import Report from './pages/Report';
-import darurat from '../src/pages/darurat';
+import darurat from '../src/pages/darurat.jsx';
+import Footer from '../src/components/Footer';
 
 
 function App() {
@@ -43,7 +44,9 @@ function App() {
           </div>
         </div>
       </Router>
+      <Footer />
     </div>
+    
   );
 }
 

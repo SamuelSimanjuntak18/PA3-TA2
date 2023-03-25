@@ -1,8 +1,7 @@
 import React from "react";
-import login from "apis/auth";
+import login from "../apis/auth";
 import { useState } from "react";
-import '../styles/login.css';
-
+import "../styles/login.css";
 
 function Login() {
 

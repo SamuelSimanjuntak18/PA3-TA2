@@ -1,9 +1,8 @@
-import BanjirImage from "assets/images/report.png";
+import React from "react";
+import BanjirImage from "../assets/images/report.png";
 import Card from "react-bootstrap/Card";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col,Row } from 'react-bootstrap';
-import Footer from "../components/Footer";
 import "../styles/Report.css";
 
 function darurat() {
@@ -19,144 +18,117 @@ function darurat() {
           <div className="container position-relative hero-container ">
             <div className="row">
               <div className="col-md-10 text-sta d-flex flex-column justify-content-center">
-                <h1>LAPOR</h1>
-                <p className="subtext-hero">
+                <h1 style={{
+                  position: 'absolute',
+                  width: '224px',
+                  height: '82px',
+                  left: '609px',
+                    top: '-40px',
+                    fontFamily:'Roboto',
+                    fontStyle:'normal',
+                    fontSize:"70px",
+                    fontWeight:'700',
+              
+              }}>LAPOR</h1>
+                <p style={{
+                  position: 'absolute',
+                  width: '900px',
+                  height: '20px',
+                  left: '300px',
+                   top: '-100px',
+                   fontWeight:"300",
+                  fontFamily:'Roboto',
+                  fontStyle:'normal',
+                  fontSize:"25px",
+                  fontWeight:'700',
+
+
+                
+              
+              }}>
                   Siap Membantu Masyarakat Dalam Situasi Gawat Darurat
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <Row>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-6">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards">
-                <br />
-                <Card.Title >Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-12">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards">
-                <br />
-                <Card.Title>Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-12">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards">
-                <br />
-                <Card.Title>Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-12">
-              <Card style={{ width: "20rem", height: "22rem"}}className="cards" >
-                <br />
-                <Card.Title>Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-12">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards">
-                <br />
-                <Card.Title>Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        <Col md={4}>
-        <div className="container mt-5 mb-9">
-          <div className="row">
-            <div className="col-md-12">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards">
-                <br />
-                <Card.Title>Dinas Pemadam Kebakaran</Card.Title>
-                <Card.Img variant="top" src="/assets/images/damkar.png" />
-                <Card.Body>
-                  <Card.Text>
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        </Col>
-        </Row>
+        <br />
+        <h2 style={{fontFamily: 'Roboto'}}>Keadaan Darurat? <span style={{color: 'red'}}>Segera Hubungi Kami!</span></h2>
       </div>
-      <Footer/>
+    <div className="container">
+    <div class="row container">
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+            <div class="col-md-4 container py-2">
+              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
+                  <br />
+                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
+                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
+                      <button className="darurat">
+                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
+                        <strong>0811 6212 119</strong>
+                      </button>
+                </Card>
+            </div>
+
+          
+        </div>
+    </div>
+      
+     
     </>
   );
 }

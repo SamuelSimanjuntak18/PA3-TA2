@@ -127,7 +127,7 @@ function Mitigasi() {
           </div>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 }

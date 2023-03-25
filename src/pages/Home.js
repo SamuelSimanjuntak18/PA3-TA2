@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from '../assets/images/banjir.jpg';
 import PemetaanMaps from '../components/PemetaanMaps';
-import Footer from '../components/Footer';
+
 
 const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -77,7 +77,7 @@ const Home = ({ city }) => {
       </div> */}
 
       <div>
-        <Footer />
+      
       </div>
     </div>
   );

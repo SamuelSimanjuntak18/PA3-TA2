@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/Report.css';
-import Footer from "../components/Footer";
+
 
 function Report() {
   // const [name, setName] = useState("Nama");
@@ -47,12 +47,12 @@ function Report() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="deskripsi">Deskripsi</label>
+            <label htmlFor="keterangan">Keterangan</label>
             <textarea
               type="deskripsi"
               id="deskripsi"
               // value={deskripsi}
-              placeholder="Deskripsi Bencana"
+              placeholder="Keterangan"
               // onChange={(event) => setDeskripsi(event.target.value)}
               required
             />
@@ -76,7 +76,7 @@ function Report() {
         </fieldset>
       </form>
       <div>
-        <Footer />
+        
       </div>
     </div>
   );
