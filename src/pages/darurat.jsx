@@ -40,7 +40,7 @@ function darurat() {
                   fontFamily:'Roboto',
                   fontStyle:'normal',
                   fontSize:"25px",
-                  fontWeight:'700',
+                  
 
 
                 

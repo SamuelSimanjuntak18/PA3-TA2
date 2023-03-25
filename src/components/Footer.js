@@ -21,16 +21,16 @@ const Footer = () => {
             <h6>Tentang Kami</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="">Bantuan</a>
+                <a href="#">Bantuan</a>
               </li>
               <li>
-                <a href="">Info Layanan</a>
+                <a href="#">Info Layanan</a>
               </li>
               <li>
-                <a href="">Kegiatan</a>
+                <a href="#">Kegiatan</a>
               </li>
               <li>
-                <a href="">Pendaftaran</a>
+                <a href="#">Pendaftaran</a>
               </li>
             </ul>
           </div>
@@ -38,13 +38,13 @@ const Footer = () => {
             <h6>Kontak</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="">No Telepon : 0632 21 709</a>
+                <a href="#">No Telepon : 0632 21 709</a>
               </li>
               <li>
-                <a href="">Email</a>
+                <a href="#">Email</a>
               </li>
               <li>
-                <a href="">Hak Cipta oleh BPBD Kabupaten Toba</a>
+                <a href="#">Hak Cipta oleh BPBD Kabupaten Toba</a>
               </li>
             </ul>
           </div>
