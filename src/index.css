@@ -118,7 +118,7 @@ button[type="submit"] {
   height: 100%;
   background-color: #000000;
   content: "";
-  opacity: 30%;
+  opacity: 10%;
 }
 
 .hero-container {

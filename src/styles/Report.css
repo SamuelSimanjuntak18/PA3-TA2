@@ -1,24 +1,26 @@
 .form-group {
   margin-bottom: 1rem;
   text-align: left;
+  font-size: 16px;
+
+  
 
 }
 
 label {
   display: block;
   margin-bottom: 0.5rem;
+  
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="location"],
 select,
 input[type="file"] {
   display: block;
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   box-sizing: border-box;
@@ -47,10 +49,8 @@ fieldset {
   padding: 1rem;
   margin-bottom: 1rem;
   font-family: 'Roboto';font-size: 10px;
+  
 }
-
-
-
 
 .garis {
   border: 5px solid black;
@@ -71,20 +71,19 @@ fieldset {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 35px;
-
-}
-.damkar{
-  width: 250px;
-  position: static;
-
-}
-.judul{
   font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
- margin-left: -7%;
-
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  
 }
+.posisiform{
+  margin-top: -35%;
+}
+
+

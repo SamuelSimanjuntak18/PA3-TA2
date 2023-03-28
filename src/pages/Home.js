@@ -61,20 +61,11 @@ const Home = ({ city }) => {
         <div className="row">
           <div className="col-md-7">
             <PemetaanMaps />
+
           </div>
         </div>
       </div>
 
-      {/* <div className="container">
-        <h2>{city}</h2>
-        <p>{main}</p>
-        <p>{description}</p>
-        <p>{temperature} &deg;C</p>
-        <img
-          src={`http://openweathermap.org/img/w/${icon}.png`}
-          alt={description}
-        />
-      </div> */}
 
       <div>
       

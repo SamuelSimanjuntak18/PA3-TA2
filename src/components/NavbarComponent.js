@@ -5,7 +5,7 @@ export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <div style={{ display: "flex", alignItems: "center" }}>
             <div className="logo">
               <center>
@@ -29,7 +29,7 @@ export const NavbarComponent = () => {
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="Report">Lapor</Nav.Link>
+            <Nav.Link href="darurat">Lapor</Nav.Link>
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam
