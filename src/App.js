@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import login from "./pages/login";
 import Report from "pages/Report";
 import Register from "pages/register";
+import Dashboard from "pages/admin/Dashboard";
+import PrivateRoute from "utils/PrivateRoute";
 
 function App() {
   return (
@@ -21,6 +23,11 @@ function App() {
           <Route path="/laporan" exact component={Report} />
           <Route path="/login" exact component={login} />
           <Route path="/register" exact component={Register} />
+
+          {/* Admin */}
+          <PrivateRoute path="/dashboard" exact component={Dashboard} />
+
+          
         </Switch>
       </Router>
     </div>

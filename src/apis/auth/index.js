@@ -17,10 +17,10 @@ async function login({
             password: password
         })
         .then((response) => {
-            const { data: { data, token }, message } = response.data;
+            const { data: { user, token }, message } = response.data;
             localStorage.setItem('token', token);
-            localStorage.setItem('user_data', JSON.stringify(data));
-            console.log(message);
+            localStorage.setItem('user_data', JSON.stringify(user));
+            return response.status;
         })
         .catch((error) => {
             const { message } = error.response.data;
