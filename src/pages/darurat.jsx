@@ -290,7 +290,6 @@ function darurat() {
                 <button type="submit">Submit</button>
               </fieldset>
             </form>
-            <div></div>
           </div>
         </div>
       </Fade>

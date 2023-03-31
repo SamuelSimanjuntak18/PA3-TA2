@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-import BanjirImage from '../assets/images/banjir.jpg';
-import PemetaanMaps from '../components/PemetaanMaps';
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import BanjirImage from "../assets/images/banjir.jpg";
+import PemetaanMaps from "../components/PemetaanMaps";
 
 const Home = ({ city }) => {
   const [weatherData, setWeatherData] = useState(null);
@@ -12,13 +11,12 @@ const Home = ({ city }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        'https://api.openweathermap.org/data/2.5/weather?q= Medan&appid=a48f1558de3938d6cb3af48c90463ae4&units=metric'
+        "https://api.openweathermap.org/data/2.5/weather?q= Medan&appid=a48f1558de3938d6cb3af48c90463ae4&units=metric"
       );
       setWeatherData(response.data);
     };
     fetchData();
   }, [city]);
-
 
   return (
     <div>
@@ -32,7 +30,12 @@ const Home = ({ city }) => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <button className="btn-custom-danger">
-                <a href="/Report" style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
+                <a
+                  href="/darurat"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <strong >LAPOR!</strong>
+                </a>
               </button>
             </div>
             <div className="col-md-6">
@@ -61,14 +64,8 @@ const Home = ({ city }) => {
         <div className="row">
           <div className="col-md-7">
             <PemetaanMaps />
-
           </div>
         </div>
-      </div>
-
-
-      <div>
-      
       </div>
     </div>
   );

@@ -77,11 +77,10 @@ const Cuaca = ({ title, description }) => {
           </Modal>
           <br />
           <br />
-          <br />  
-         </div>
+          <br />
+        </div>
       </div>
     </div>
-    
   );
 };
 

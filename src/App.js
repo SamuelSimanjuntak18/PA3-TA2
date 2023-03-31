@@ -13,8 +13,8 @@ import register from "./pages/register";
 import darurat from "../src/pages/darurat.jsx";
 import Detail_Laporan from "./pages/Detail_Laporan";
 import Footer from "../src/components/Footer";
-import Dashboard from "pages/admin/Dashboard";
-import PrivateRoute from "utils/PrivateRoute";
+// import Dashboard from "pages/admin/Dashboard";
+// import PrivateRoute from "utils/PrivateRoute";
 
 function App() {
   return (
@@ -34,10 +34,7 @@ function App() {
             <Route path="/Detail_Laporan" exact component={Detail_Laporan} />
           </div>
 
-          <PrivateRoute path="/dashboard" exact component={Dashboard} />
-
-          
-
+          {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}
         </Switch>
 
         <div className=" box-button-urgent">

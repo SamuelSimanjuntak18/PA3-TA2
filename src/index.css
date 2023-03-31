@@ -8,7 +8,8 @@ body {
 .navbar {
   background-color: #0255A5;
   height: 75px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
+
 }
 
 .brand-bold {
@@ -134,6 +135,8 @@ button[type="submit"] {
   width: 220px;
   height: 64px;
   font-size: 24px;
+  font-family: 'Inter', sans-serif;
+
 }
 
 .text-hero {
