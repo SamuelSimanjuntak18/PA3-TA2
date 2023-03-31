@@ -32,11 +32,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.fs-6{
+.fs-6 {
   font-size: 14px !important;
 }

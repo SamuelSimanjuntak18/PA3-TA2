@@ -15,7 +15,7 @@
 
 .login-form h2 {
   margin-bottom: 2rem;
-  
+
 }
 
 .login-form label {
@@ -34,7 +34,7 @@
 }
 
 .login-form button {
-  background-color: #4CAF50;
+  background-color: #0B8F00;
   color: white;
   border: none;
   border-radius: 0.25rem;
@@ -42,11 +42,13 @@
   cursor: pointer;
   margin-left: 3.5%;
 }
-.login-box{
-    width: 580px;
+
+.login-box {
+  width: 580px;
 }
-.tes{
-  
-    color: #7CC6F6;
-    font-Weight: bold;
-  }
+
+.tes {
+
+  color: #7CC6F6;
+  font-Weight: bold;
+}

@@ -1,45 +1,43 @@
-.footer{
+.footer {
     background-color: #0255A5;
     color: white;
     height: 100%;
 }
 
-
-
-.col-lg-1{
+.col-lg-1 {
     text-align: center;
     /* font-weight: medium; */
     padding-top: 30px;
 }
 
-.col-lg-1 h6{
+.col-lg-1 h6 {
     margin-top: 5px;
 }
 
-.col-lg-1 img{
+.col-lg-1 img {
     width: 50px;
     height: 50px;
 }
 
-.col-lg-5{
+.col-lg-5 {
     margin-left: 40px;
     padding: 50px 0px;
     color: white;
 }
 
-.col-lg-2{
+.col-lg-2 {
     margin-left: 40px;
     padding: 50px 0px;
     margin-right: 40px;
 }
 
-.col-lg-2 a{
+.col-lg-2 a {
     text-decoration: none;
     line-height: 2.5;
     font-size: 14px;
     color: #ffffff;
 }
 
-.col-lg-2 a:hover{
+.col-lg-2 a:hover {
     color: #FE9705;
 }

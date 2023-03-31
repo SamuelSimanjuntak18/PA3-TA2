@@ -20,12 +20,6 @@ const Home = ({ city }) => {
     fetchData();
   }, [city]);
 
-  if (!weatherData) {
-    return <div>Loading...</div>;
-  }
-
-  const { main, description, icon } = weatherData.weather[0];
-  const temperature = weatherData.main.temp;
 
   return (
     <div>
@@ -39,7 +33,7 @@ const Home = ({ city }) => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <button className="btn-custom-danger">
-                <b>LAPOR!</b>
+                <a href="/Report" style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
               </button>
             </div>
             <div className="col-md-6 col-sm-7 right-hero">
