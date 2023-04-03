@@ -5,7 +5,7 @@ export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <div style={{ display: "flex", alignItems: "center" }}>
             <div className="logo">
               <center>

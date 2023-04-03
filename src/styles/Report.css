@@ -4,6 +4,12 @@
 
 }
 
+@media(max-width: 670px){
+  .submit{
+    background-color: red;
+  }
+}
+
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -46,11 +52,9 @@ fieldset {
   border-radius: 0.25rem;
   padding: 1rem;
   margin-bottom: 1rem;
-  font-family: 'Roboto';font-size: 10px;
+  font-family: 'Roboto';
+  font-size: 10px;
 }
-
-
-
 
 .garis {
   border: 5px solid black;
@@ -61,30 +65,30 @@ fieldset {
   background-color: #FA0000;
   color: #fff;
   border: none;
- 
   width: 250px;
   height: 60px;
   font-size: 24px;
   margin-right: 20%;
 
-  
 }
 
 .card {
   background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px  4px 4px rgba(0, 0, 0, 0.25);
   padding: 35px;
 
 }
-.damkar{
+
+.damkar {
   width: 250px;
   position: static;
 
 }
-.judul{
+
+.judul {
   font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
- margin-left: -7%;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: -7%;
 
 }
