@@ -1,136 +1,310 @@
-import React from "react";
+import React, { useState } from "react";
 import BanjirImage from "../assets/images/report.png";
 import Card from "react-bootstrap/Card";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Report.css";
 
-function darurat() {
+function Darurat() {
+  // const [open, setOpen] = useState(true);
+  // const [opens, setOpens] = useState(false);
+  // const toggleOpen = () => {
+  //   setOpen(true);
+  //   setOpens(false);
+  // };
+
+  // const toggleOpens = () => {
+  //   setOpens(true);
+  //   setOpen(false);
+  // };
+  const [option, setOption] = useState("Bencana");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Submit form data to server
+  };
+
+  const handleAvatarChange = (event) => { };
+
   return (
     <>
-      <div>
-        <div className="hero position-relative d-flex justify-content-center align-items-center">
-          <img
-            src={BanjirImage}
-            className="overflow-hidden hero-image"
-            alt=""
-          />
-          <div className="container position-relative hero-container ">
-            <div className="row">
-              <div className="col-md-10 text-sta d-flex flex-column justify-content-center">
-                <h1 style={{
-                  position: 'absolute',
-                  width: '224px',
-                  height: '82px',
-                  left: '609px',
-                    top: '-40px',
-                    fontFamily:'Roboto',
-                    fontStyle:'normal',
-                    fontSize:"70px",
-                    fontWeight:'700',
-              
-              }}>LAPOR</h1>
-                <p style={{
-                  position: 'absolute',
-                  width: '900px',
-                  height: '20px',
-                  left: '300px',
-                   top: '-100px',
-                   fontWeight:"300",
-                  fontFamily:'Roboto',
-                  fontStyle:'normal',
-                  fontSize:"25px",
-                  
-
-
-                
-              
-              }}>
+      <div className="hero position-relative d-flex justify-content-center align-items-center">
+        <img src={BanjirImage} className="overflow-hidden hero-image" alt="" />
+        <div className="container position-relative hero-container ">
+          <div className="row">
+            <div className="col-md-12 text-sta d-flex flex-column justify-content-center align-items-center">
+              <div className="position-absolute w-100">
+                <h1
+                  style={{
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontSize: "70px",
+                    fontWeight: "700",
+                  }}
+                >
+                  LAPOR
+                </h1>
+                <p
+                  style={{
+                    fontWeight: "300",
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontSize: "25px",
+                  }}
+                >
                   Siap Membantu Masyarakat Dalam Situasi Gawat Darurat
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <br />
-        <h2 style={{fontFamily: 'Roboto'}}>Keadaan Darurat? <span style={{color: 'red'}}>Segera Hubungi Kami!</span></h2>
       </div>
-    <div className="container">
-    <div class="row container">
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
+      <br />
+      <div className="d-flex justify-content-center align-items-center">
+        <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link active border btn "
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              Kontak Darurat
+            </button>
+          </li>
+          <li className="nav-item" role="presentation">
+            <button
+              className="nav-link border"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              Lapor
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div className="tab-content" id="pills-tabContent">
+        <div
+          className="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <div id="">
+            <div className="container">
+              <div class="row container">
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p className="judul"> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
-            </div>
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
-            </div>
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
-            </div>
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
-            </div>
-            <div class="col-md-4 container py-2">
-              <Card style={{ width: "20rem", height: "22rem" }} className="cards  container">
-                  <br />
-                  <Card.Title ><p className="judul"> Dinas Pemadam Kebakaran</p></Card.Title>
-                  <Card.Img variant="top" src="/assets/images/damkar.png" className="damkar"/>
-                      <button className="darurat">
-                        <FontAwesomeIcon icon={faPhoneVolume} />&nbsp;
-                        <strong>0811 6212 119</strong>
-                      </button>
-                </Card>
-            </div>
-
-          
+          </div>
         </div>
-    </div>
-      
-     
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          {/* <div style={{backgroundColor:"#0255A5"}}> */}
+          <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control">
+            <fieldset>
+              <legend>FORM PELAPORAN</legend>
+              <h6 style={{ fontSize: "20px" }}>
+                {" "}
+                Jika anda ingin melaporkan berita terjadinya bencana alam,
+                Silakan melaporkannya melalui form dibawah ini.
+              </h6>
+              <br />
+              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{color:"red"}}> <b>No Telepon : 063221709</b> </span></h6>
+              <hr className=""></hr>
+              <div className="form-group">
+                <label htmlFor="option">Jenis Bencana</label>
+                <select
+                  id="option"
+                  value={option}
+                  onChange={(event) => setOption(event.target.value)}
+                  required
+                >
+                  <option value="option1">Bencana Alam</option>
+                  <option value="option2">Bencana Non Alam</option>
+                  <option value="option3">Bencana Sosial </option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label htmlFor="name">Lokasi</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Lokasi Bencana"
+                  // onChange={(event) => setName(event.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="Keterangan">Keterangan</label>
+                <textarea
+                  type="text"
+                  id="keterangan"
+                  // value={deskripsi}
+                  placeholder="Keterangan"
+                  // onChange={(event) => setDeskripsi(event.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="number">Nomor Telepon</label>
+                <input
+                  type="text"
+                  id="number"
+                  placeholder="Nomor Telepon Aktif"
+                  // onChange={(event) => setNumber(event.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="gambar">Gambar</label>
+                <input type="file" id="gambar" onChange={handleAvatarChange} />
+              </div>
+              <br />
+              <button type="submit">Submit</button>
+            </fieldset>
+          </form>
+          </div>
+        </div>
+      {/* </div> */}
     </>
   );
 }
 
-export default darurat;
+export default Darurat;

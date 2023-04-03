@@ -16,12 +16,12 @@ function Report() {
   const handleAvatarChange = (event) => { };
 
   return (
-    <div className="report">
+    <div>
       <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }}>
         <fieldset>
           <legend>FORM PELAPORAN</legend>
-          Jika anda ingin melaporkan berita terjadinya bencana alam, Silakan
-          melaporkannya melalui form dibawah ini.
+         <h6  style={{fontSize: "20px",}}> Jika anda ingin melaporkan berita terjadinya bencana alam, Silakan
+          melaporkannya melalui form dibawah ini.</h6>
           <hr className="garis"></hr>
           <div className="form-group">
             <label htmlFor="option">Jenis Bencana</label>
@@ -47,10 +47,10 @@ function Report() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="keterangan">Keterangan</label>
+            <label htmlFor="Keterangan">Keterangan</label>
             <textarea
-              type="deskripsi"
-              id="deskripsi"
+              type="text"
+              id="keterangan"
               // value={deskripsi}
               placeholder="Keterangan"
               // onChange={(event) => setDeskripsi(event.target.value)}
@@ -76,7 +76,7 @@ function Report() {
         </fieldset>
       </form>
       <div>
-        
+
       </div>
     </div>
   );
