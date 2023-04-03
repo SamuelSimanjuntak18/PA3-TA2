@@ -20,7 +20,6 @@ const Home = ({ city }) => {
     fetchData();
   }, [city]);
 
-
   return (
     <div>
       <div className="hero position-relative d-flex justify-content-center align-items-center">
@@ -33,7 +32,12 @@ const Home = ({ city }) => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <button className="btn-custom-danger">
-                <a href="/Report" style={{ textDecoration: 'none', color: 'white' }}><strong>LAPOR!</strong></a>
+                <a
+                  href="/Report"
+                  style={{ textDecoration: 'none', color: 'white' }}
+                >
+                  <strong>LAPOR!</strong>
+                </a>
               </button>
             </div>
             <div className="col-md-6 col-sm-7 right-hero">
@@ -114,7 +118,7 @@ const Home = ({ city }) => {
               <h5 className="fw-bold my-5 text-white">Pengumuman</h5>
               <div className="row">
                 <div className="col-md-3">
-                  <div class="card" style={{ width: '18rem' }}>
+                  <div class="card p-0" style={{ width: '18rem' }}>
                     <img
                       src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
                       class="card-img-top"
@@ -134,13 +138,13 @@ const Home = ({ city }) => {
                   </div>
                 </div>
                 <div className="col-md-3">
-                  <div class="card" style={{ width: '18rem' }}>
+                  <div class="card p-0" style={{ width: '100%' }}>
                     <img
                       src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
                       class="card-img-top"
                       alt="..."
                     />
-                    <div class="card-body">
+                    <div class="card-body text-start">
                       <h5 class="card-title">Card title</h5>
                       <h6 class="card-subtitle mb-2 text-muted ">
                         Card subtitle
@@ -149,7 +153,11 @@ const Home = ({ city }) => {
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
                       </p>
-                      b5
+                      <div className="d-flex justify-content-end">
+                        <button className="btn btn-primary">
+                          Baca Selengkapnya
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
