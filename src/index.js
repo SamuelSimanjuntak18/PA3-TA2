@@ -5,12 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ReactComponent as Logo } from '../src/logo.svg';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   // <React.StrictMode>
-  <App />
+  <App logo={<Logo />} />
+ 
   // </React.StrictMode>
 );
 

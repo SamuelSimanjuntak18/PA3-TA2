@@ -16,7 +16,7 @@ function Report() {
   const handleAvatarChange = (event) => { };
 
   return (
-    <div className="report">
+    <div>
       <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }}>
         <fieldset>
           <legend>FORM PELAPORAN</legend>
@@ -76,7 +76,7 @@ function Report() {
         </fieldset>
       </form>
       <div>
-        
+
       </div>
     </div>
   );

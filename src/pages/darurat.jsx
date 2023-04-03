@@ -1,31 +1,29 @@
-import React, { useState } from 'react';
-import BanjirImage from '../assets/images/report.png';
-import Card from 'react-bootstrap/Card';
-import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from 'react-bootstrap/Button';
-import Fade from 'react-bootstrap/Fade';
-import '../styles/Report.css';
+import React, { useState } from "react";
+import BanjirImage from "../assets/images/report.png";
+import Card from "react-bootstrap/Card";
+import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../styles/Report.css";
 
 function Darurat() {
-  const [open, setOpen] = useState(true);
-  const [opens, setOpens] = useState(false);
-  const toggleOpen = () => {
-    setOpen(true);
-    setOpens(false);
-  };
+  // const [open, setOpen] = useState(true);
+  // const [opens, setOpens] = useState(false);
+  // const toggleOpen = () => {
+  //   setOpen(true);
+  //   setOpens(false);
+  // };
 
-  const toggleOpens = () => {
-    setOpens(true);
-    setOpen(false);
-  };
-  const [option, setOption] = useState('Bencana');
+  // const toggleOpens = () => {
+  //   setOpens(true);
+  //   setOpen(false);
+  // };
+  const [option, setOption] = useState("Bencana");
   const handleSubmit = (event) => {
     event.preventDefault();
     // Submit form data to server
   };
 
-  const handleAvatarChange = (event) => {};
+  const handleAvatarChange = (event) => { };
 
   return (
     <>
@@ -37,20 +35,20 @@ function Darurat() {
               <div className="position-absolute w-100">
                 <h1
                   style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontSize: '70px',
-                    fontWeight: '700',
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontSize: "70px",
+                    fontWeight: "700",
                   }}
                 >
                   LAPOR
                 </h1>
                 <p
                   style={{
-                    fontWeight: '300',
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontSize: '25px',
+                    fontWeight: "300",
+                    fontFamily: "Roboto",
+                    fontStyle: "normal",
+                    fontSize: "25px",
                   }}
                 >
                   Siap Membantu Masyarakat Dalam Situasi Gawat Darurat
@@ -65,7 +63,7 @@ function Darurat() {
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link active border"
+              className="nav-link active border btn "
               id="pills-home-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-home"
@@ -74,7 +72,7 @@ function Darurat() {
               aria-controls="pills-home"
               aria-selected="true"
             >
-              Home
+              Kontak Darurat
             </button>
           </li>
           <li className="nav-item" role="presentation">
@@ -88,7 +86,7 @@ function Darurat() {
               aria-controls="pills-profile"
               aria-selected="false"
             >
-              Profile
+              Lapor
             </button>
           </li>
         </ul>
@@ -105,7 +103,7 @@ function Darurat() {
               <div class="row container">
                 <div class="col-md-4 container py-2">
                   <Card
-                    style={{ width: '20rem', height: '22rem' }}
+                    style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
                   >
                     <br />
@@ -126,7 +124,7 @@ function Darurat() {
                 </div>
                 <div class="col-md-4 container py-2">
                   <Card
-                    style={{ width: '20rem', height: '22rem' }}
+                    style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
                   >
                     <br />
@@ -147,7 +145,7 @@ function Darurat() {
                 </div>
                 <div class="col-md-4 container py-2">
                   <Card
-                    style={{ width: '20rem', height: '22rem' }}
+                    style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
                   >
                     <Card.Title>
@@ -167,28 +165,7 @@ function Darurat() {
                 </div>
                 <div class="col-md-4 container py-2">
                   <Card
-                    style={{ width: '20rem', height: '22rem' }}
-                    className="cards  container"
-                  >
-                    <br />
-                    <Card.Title>
-                      <p> Dinas Pemadam Kebakaran</p>
-                    </Card.Title>
-                    <Card.Img
-                      variant="top"
-                      src="/assets/images/damkar.png"
-                      className="damkar"
-                    />
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      &nbsp;
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card>
-                </div>
-                <div class="col-md-4 container py-2">
-                  <Card
-                    style={{ width: '20rem', height: '22rem' }}
+                    style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
                   >
                     <br />
@@ -209,7 +186,28 @@ function Darurat() {
                 </div>
                 <div class="col-md-4 container py-2">
                   <Card
-                    style={{ width: '20rem', height: '22rem' }}
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div class="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
                   >
                     <br />
@@ -238,14 +236,17 @@ function Darurat() {
           role="tabpanel"
           aria-labelledby="pills-profile-tab"
         >
-          <form onSubmit={handleSubmit} style={{ paddingBottom: '100px' }}>
+          {/* <div style={{backgroundColor:"#0255A5"}}> */}
+          <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control">
             <fieldset>
               <legend>FORM PELAPORAN</legend>
-              <h6 style={{ fontSize: '20px' }}>
-                {' '}
+              <h6 style={{ fontSize: "20px" }}>
+                {" "}
                 Jika anda ingin melaporkan berita terjadinya bencana alam,
                 Silakan melaporkannya melalui form dibawah ini.
               </h6>
+              <br />
+              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{color:"red"}}> <b>No Telepon : 063221709</b> </span></h6>
               <hr className=""></hr>
               <div className="form-group">
                 <label htmlFor="option">Jenis Bencana</label>
@@ -299,8 +300,9 @@ function Darurat() {
               <button type="submit">Submit</button>
             </fieldset>
           </form>
+          </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

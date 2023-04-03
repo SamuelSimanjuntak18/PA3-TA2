@@ -6,15 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Mitigasi from "./pages/Mitigasi";
-import Home from "./pages/Home";
+import Home from "./pages/Home.jsx";
 import login from "./pages/login";
 import register from "./pages/register";
 // import Report from './pages/Report.jsx';
 import darurat from "../src/pages/darurat.jsx";
 import Detail_Laporan from "./pages/Detail_Laporan";
 import Footer from "../src/components/Footer";
-import Dashboard from "pages/admin/Dashboard";
-import PrivateRoute from "utils/PrivateRoute";
+import laporanSelesai from "./pages/laporanSelesai";
+// import Dashboard from "pages/admin/Dashboard";
+// import PrivateRoute from "utils/PrivateRoute";
 
 function App() {
   return (
@@ -32,22 +33,24 @@ function App() {
             <Route path="/register" exact component={register} />
             <Route path="/darurat" exact component={darurat} />
             <Route path="/Detail_Laporan" exact component={Detail_Laporan} />
+            <Route path="/laporanSelesai" exact component={laporanSelesai} />
           </div>
 
-          <PrivateRoute path="/dashboard" exact component={Dashboard} />
-
-          
-
+          {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}
         </Switch>
 
         <div className=" box-button-urgent">
           <div className="d-flex flex-column gap-3">
-            <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
+            {/* <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
               <FontAwesomeIcon icon={faEnvelope} />
-            </div>
-            <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
-              <FontAwesomeIcon icon={faPhoneVolume} />
-            </div>
+            </div> */}
+            <div className="button-urgent animasi rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
+  
+  <a href="/darurat" style={{ textDecoration: "none", color: "white" }}>
+  <FontAwesomeIcon icon={faPhoneVolume} />
+  </a>
+</div>
+
           </div>
         </div>
       </Router>

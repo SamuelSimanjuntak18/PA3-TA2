@@ -2,6 +2,7 @@
   margin-bottom: 1rem;
   text-align: left;
   font-size: 16px;
+  
 
   
 
@@ -10,6 +11,7 @@
 label {
   display: block;
   margin-bottom: 0.5rem;
+ 
   
 }
 
@@ -81,9 +83,12 @@ fieldset {
   line-height: 14px;
   color: #000000;
   
+  
 }
 .posisiform{
   margin-top: -50%;
+  
 }
-
-
+.report{
+  background-color: #0255A5;
+}
