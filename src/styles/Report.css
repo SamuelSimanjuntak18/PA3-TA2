@@ -56,13 +56,9 @@ fieldset {
   border-radius: 0.25rem;
   padding: 1rem;
   margin-bottom: 1rem;
-<<<<<<< HEAD
   font-family: 'Roboto';
   font-size: 10px;
-=======
   font-family: 'Roboto';font-size: 10px;
-  
->>>>>>> e628912696c6daebf77e24409a56d0e07d3bcc90
 }
 
 .garis {
@@ -82,11 +78,9 @@ fieldset {
 }
 
 .card {
-<<<<<<< HEAD
   background-color: #fff;
   box-shadow: 0px  4px 4px rgba(0, 0, 0, 0.25);
   padding: 35px;
-
 }
 
 .damkar {
@@ -100,8 +94,6 @@ fieldset {
   font-style: normal;
   font-weight: 700;
   margin-left: -7%;
-
-=======
   background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 35px;
@@ -120,5 +112,4 @@ fieldset {
 }
 .report{
   background-color: #0255A5;
->>>>>>> e628912696c6daebf77e24409a56d0e07d3bcc90
 }
