@@ -29,7 +29,7 @@ export const NavbarComponent = () => {
           <Nav className="ms-auto">
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="mitigasi">Mitigasi Bencana</Nav.Link>
-            <Nav.Link href="darurat">Lapor</Nav.Link>
+            {/* <Nav.Link href="darurat">Lapor</Nav.Link> */}
             <NavDropdown title="Data Bencana" id="basic-nav-dropdown">
               <NavDropdown.Item href="Bencana Alam">
                 Bencana Alam

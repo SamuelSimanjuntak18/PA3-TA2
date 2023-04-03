@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -155,7 +155,15 @@ button[type="submit"] {
   height: 100%;
 }
 
+.peringatan-dini-hero {
+  width: 475px;
+  height: 270px;
+  border-radius: 15px;
+  background-color: #FE9705;
+}
+
 .peringatan-dini {
+  display: none;
   width: 475px;
   height: 270px;
   border-radius: 15px;
@@ -182,3 +190,32 @@ button[type="submit"] {
   letter-spacing: 1.5px;
   font-weight: 700;
 }
+
+.bg-blue {
+  background-color: #0255A5;
+}
+
+.bg-oranye {
+  background-color: #FE9705;
+}
+
+.box-cuaca {
+  height: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);;
+}
+
+.card img {
+  height: 150px;
+  object-fit: cover;
+}
+/* @keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animasi {
+  animation: blink 1s infinite;
+} */
