@@ -100,8 +100,8 @@ function Darurat() {
         >
           <div id="">
             <div className="container">
-              <div class="row container">
-                <div class="col-md-4 container py-2">
+              <div className="row container">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -122,7 +122,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -143,7 +143,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -163,28 +163,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
-                  <Card
-                    style={{ width: "20rem", height: "22rem" }}
-                    className="cards  container"
-                  >
-                    <br />
-                    <Card.Title>
-                      <p> Dinas Pemadam Kebakaran</p>
-                    </Card.Title>
-                    <Card.Img
-                      variant="top"
-                      src="/assets/images/damkar.png"
-                      className="damkar"
-                    />
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      &nbsp;
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card>
-                </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -205,7 +184,28 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -231,7 +231,7 @@ function Darurat() {
           </div>
         </div>
         <div
-          class="tab-pane fade"
+          className="tab-pane fade"
           id="pills-profile"
           role="tabpanel"
           aria-labelledby="pills-profile-tab"
