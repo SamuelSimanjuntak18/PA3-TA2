@@ -43,3 +43,29 @@
   text-align: center;
 
 }
+
+.cuaca-box{
+  width: 200px !important;
+}
+
+
+
+.box-weather::-webkit-scrollbar {
+  width: 10px;
+  height: 3px !important;
+}
+
+/* Track */
+.box-weather::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.box-weather::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.box-weather::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

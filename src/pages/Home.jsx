@@ -19,13 +19,8 @@ const Home = () => {
 
     setWeatherData(data.data);
 
-    setWeatherDesc(data.data.params.filter((item) => item.id == 'weather'));
-    // console.log(weatherDesc);
+    setWeatherDesc(data.data.params.filter((item) => item.id === 'weather')[0]);
   };
-
-  weatherDesc.map((item) => {
-    console.log(item.times[1]);
-  });
 
   useEffect(() => {
     fetchData();
@@ -41,6 +36,26 @@ const Home = () => {
   //   };
   //   fetchData();
   // }, []);
+
+  const formatDate = (dateString) => {
+    const year = dateString.substr(0, 4);
+    const month = dateString.substr(4, 2) - 1; // dikurangi 1 karena indeks bulan dimulai dari 0
+    const day = dateString.substr(6, 2);
+    const hour = dateString.substr(8, 2);
+    const minute = dateString.substr(10, 2);
+    const date = new Date(year, month, day, hour, minute);
+    const formattedDate = date.toLocaleString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+
+    return formattedDate;
+  }
 
   return (
     <>
@@ -121,29 +136,26 @@ const Home = () => {
             <div className="col-md-5">
               <h5 className="text-start mb-3 fw-bold">PRAKIRAAN CUACA</h5>
               <div
-                className="bg-white w-100 text-black text-start p-3"
-                style={{ height: '350px' }}
+                className="bg-white w-100 text-black text-start p-3 box-weather"
               >
                 <h3>{weatherData.description}</h3>
-                <div>
-                  {weatherDesc.map((item) => (
-                    <div className="mt-5">
-                      <div>
-                        <img
-                          src={
-                            item.times[2].name == 'Hujan Lebat'
+                <div className='d-flex overflow-auto'>
+                  {weatherDesc.times && weatherDesc.times.map((item, index) => (
+                    <div className="mt-5 ms-3 border px-3 cuaca-box" key={index}>
+                      <img
+                        src={
+                          item.name == 'Hujan Lebat'
+                            ? HujanImage
+                            : item.name == 'kabut'
                               ? HujanImage
-                              : item.times[2].name == 'kabut'
-                              ? HujanImage
-                              : item.times[2].name == 'berawan'
-                              ? HujanImage
-                              : ''
-                          }
-                          alt=""
-                        />
-                        {/* <p>{new Date(item.times[2].datetime)}</p> */}
-                        <p>{item.times[2].name}</p>
-                      </div>
+                              : item.name == 'berawan'
+                                ? HujanImage
+                                : ''
+                        }
+                        alt=""
+                      />
+                      <p>{formatDate(item.datetime)}</p>
+                      <p>{item.name}</p>
                     </div>
                   ))}
                 </div>
