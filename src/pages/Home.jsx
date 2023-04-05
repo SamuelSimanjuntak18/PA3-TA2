@@ -5,6 +5,10 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from '../assets/images/banjir.jpg';
 import PemetaanMaps from '../components/PemetaanMaps';
 import HujanImage from '../assets/images/hujan.png';
+import BerawanImage from '../assets/images/berawan.png';
+import KabutImage from '../assets/images/kabut.png';
+import HujanLebatImage from '../assets/images/hujan_lebat.png';
+import HujanSedangImage from '../assets/images/hujan_sedang.png';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -44,18 +48,18 @@ const Home = () => {
     const hour = dateString.substr(8, 2);
     const minute = dateString.substr(10, 2);
     const date = new Date(year, month, day, hour, minute);
-    const formattedDate = date.toLocaleString('en-US', {
+    const formattedDate = date.toLocaleString('id-ID', {
       year: 'numeric',
-      month: '2-digit',
+      month: 'long',
       day: '2-digit',
       hour: '2-digit',
       minute: '2-digit',
-      second: '2-digit',
-      hour12: false
+      // second: '',
+      hour12: false,
     });
 
     return formattedDate;
-  }
+  };
 
   return (
     <>
@@ -135,29 +139,35 @@ const Home = () => {
             </div>
             <div className="col-md-5">
               <h5 className="text-start mb-3 fw-bold">PRAKIRAAN CUACA</h5>
-              <div
-                className="bg-white w-100 text-black text-start p-3 box-weather"
-              >
+              <div className="bg-white w-100 text-black text-start p-3 box-weather">
                 <h3>{weatherData.description}</h3>
-                <div className='d-flex overflow-auto'>
-                  {weatherDesc.times && weatherDesc.times.map((item, index) => (
-                    <div className="mt-5 ms-3 border px-3 cuaca-box" key={index}>
-                      <img
-                        src={
-                          item.name == 'Hujan Lebat'
-                            ? HujanImage
-                            : item.name == 'kabut'
+                <div className="d-flex overflow-auto">
+                  {weatherDesc.times &&
+                    weatherDesc.times.map((item, index) => (
+                      <div
+                        className="mt-5 ms-3 border px-3 cuaca-box"
+                        key={index}
+                      >
+                        <img
+                          src={
+                            item.name === 'Hujan Lebat'
+                              ? HujanLebatImage
+                              : item.name === 'Kabut'
+                              ? KabutImage
+                              : item.name === 'Berawan'
+                              ? BerawanImage
+                              : item.name === 'Hujan Ringan'
                               ? HujanImage
-                              : item.name == 'berawan'
-                                ? HujanImage
-                                : ''
-                        }
-                        alt=""
-                      />
-                      <p>{formatDate(item.datetime)}</p>
-                      <p>{item.name}</p>
-                    </div>
-                  ))}
+                              : item.name === 'Hujan Sedang'
+                              ? HujanSedangImage
+                              : ''
+                          }
+                          alt=""
+                        />
+                        <p>{formatDate(item.datetime)}</p>
+                        <p>{item.name}</p>
+                      </div>
+                    ))}
                 </div>
                 {/* <p>{weatherData.params.id}</p> */}
               </div>
