@@ -1,75 +1,72 @@
-import React from 'react';
+import React from "react";
 function laporanSelesai() {
   return (
     <>
       <br />
-      <h3
-        className="card-tools text-left"
-        style={{ textAlign: 'left', margin: '40px' }}
-      >
-        Laporan Lengkap
-      </h3>
-      <div
-        className="panel panel-default"
-        style={{ textAlign: 'left', margin: '40px' }}
-      >
-        <div className="panel-body">
-          <div className="tab-content">
-            <div
-              className="card card-default"
-              style={{
-                boxShadow: 'inset 1px 1px -2px #888',
-                backgroundColor: '#D9D9D9',
-              }}
-            >
-              <div className="card-body" style={{ fontFamily: 'Inter' }}>
-                <div className="row">
-                  <div className="col-8">
-                    <p style={{ textAlign: 'left' }}>Tanggal</p>
-                    <p style={{ textAlign: 'left' }}>31-03-2023</p>
-                    <p style={{ textAlign: 'left' }}>Kejadian</p>
-                    <p style={{ textAlign: 'left' }}>Membahayakan Nyawa</p>
-                    <p style={{ textAlign: 'left' }}>Lokasi</p>
-                    <p style={{ textAlign: 'left' }}>Sitoluama,Laguboti</p>
-                    <p style={{ textAlign: 'left' }}>Deskripsi</p>
-                    <p style={{ textAlign: 'left' }}>
-                      Banjir bandang yang disebabkan tanah longsor karena erosi
-                      tanah dikarenakan hujan deras Banjir bandang yang
-                      disebabkan tanah longsor karena erosi tanah dikarenakan
-                      hujan deras Banjir bandang yang disebabkan tanah longsor
-                      karena erosi tanah dikarenakan hujan deras Banjir bandang
-                      yang disebabkan tanah longsor karena erosi tanah
-                      dikarenakan hujan deras Banjir bandang yang disebabkan
-                      tanah longsor karena erosi tanah dikarenakan hujan deras
-                    </p>
+      <center>
+        <h3 className="card-tools text-left">Laporan Lengkap</h3>
+      </center>
+      <center>
+        <div
+          className="panel panel-default 1px"
+          style={{ textAlign: "left", margin: "40px", width: "80%" }}
+        >
+          <div className="panel-body">
+            <div className="tab-content">
+              <div
+                className="card card-default"
+                style={{
+                  boxShadow: "inset 1px 1px -2px white",
+                  backgroundColor: "white",
+                }}
+              >
+                <div
+                  className="card-body"
+                  style={{ fontFamily: "Roboto", fontWeight: "200" }}
+                >
+                  <div className="row">
+                    <div className="col-8">
+                      <p style={{ textAlign: "left" }}>Tanggal</p>
+                      <p style={{ textAlign: "left" }}>31-03-2023</p>
+                      <p style={{ textAlign: "left" }}>Kejadian</p>
+                      <p style={{ textAlign: "left" }}>Membahayakan Nyawa</p>
+                      <p style={{ textAlign: "left" }}>Lokasi</p>
+                      <p style={{ textAlign: "left" }}>Sitoluama,Laguboti</p>
+                      <p style={{ textAlign: "left" }}>Deskripsi</p>
+                      <p style={{ textAlign: "left" }}>
+                        Banjir bandang yang disebabkan tanah longsor karena
+                        erosi tanah dikarenakan hujan deras
+                      </p>
+                    </div>
+
+                    <div className="col-4">
+                      <img
+                        src="/assets/images/banjirr.jpg"
+                        alt="Logo Kebencanaan"
+                        style={{ width: "270px", height: "300px" }}
+                      />
+                    </div>
                   </div>
-                  <div className="col-4">
-                    <img
-                      src="/assets/images/banjirr.jpg"
-                      alt="Logo Kebencanaan"
-                      style={{ width: '270px', height: '300px' }}
-                    />
+                  <div className="row mt-5">
+                    <div
+                      className="col-md-6 pl-5 pr-5"
+                      style={{ textAlign: "left" }}
+                    ></div>
                   </div>
-                </div>
-                <div className="row mt-5">
-                  <div
-                    className="col-md-6 pl-5 pr-5"
-                    style={{ textAlign: 'left' }}
-                  ></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>{' '}
+      </center>{" "}
       <br />
-      <h4 style={{ textAlign: 'left', margin: '40px' }}> Data Korban Jiwa</h4>
-      <hr style={{ textAlign: 'left', margin: '40px' }} />
+      <h4 style={{ textAlign: "left", margin: "40px" }}> Data Korban Jiwa</h4>
+      <hr style={{ textAlign: "left", margin: "40px" }} />
       <div className="card-body">
         <div className="pl-4 pr-4 pt-0 pb-0">
           <table
             className="table table-striped table-hover table-compact table-bordered"
-            style={{ textAlign: 'left', margin: '40px' }}
+            style={{ textAlign: "left", margin: "40px" }}
           >
             <tbody>
               <tr>
@@ -150,23 +147,23 @@ function laporanSelesai() {
         </div>
       </div>
       <br />
-      <h4 style={{ textAlign: 'left', margin: '40px' }}>
+      <h4 style={{ textAlign: "left", margin: "40px" }}>
         Kerusakan Infrastruktur
       </h4>
-      <hr style={{ textAlign: 'left', margin: '40px' }} />
+      <hr style={{ textAlign: "left", margin: "40px" }} />
       <div className="card-body">
         <div className="pl-4 pr-4 pt-0 pb-0">
           <table
             className="table table-striped table-hover table-compact table-bordered"
-            style={{ textAlign: 'left', margin: '40px' }}
+            style={{ textAlign: "left", margin: "40px" }}
           >
             <tbody>
               <tr>
                 <th rowspan="2">Nama Infrastruktur</th>
-                <th colspan="2" style={{ textAlign: 'center' }}>
+                <th colspan="2" style={{ textAlign: "center" }}>
                   Rusak
                 </th>
-                <th rowspan="2" style={{ textAlign: 'center' }}>
+                <th rowspan="2" style={{ textAlign: "center" }}>
                   Jumlah
                 </th>
               </tr>
@@ -221,16 +218,16 @@ function laporanSelesai() {
       </div>
       <div
         className="card card-default"
-        style={{ boxShadow: 'inset 1px 1px 10px #888' }}
+        style={{ boxShadow: "inset 1px 1px 10px #888" }}
       >
         <div className="card-header">
-          <span style={{ fontSize: '13pt', textAlign: 'left' }}>
+          <span style={{ fontSize: "13pt", textAlign: "left" }}>
             <h4>Upaya</h4>
           </span>
           <div className="card-tools text-right"></div>
         </div>
         <br />
-        <h4 style={{ textAlign: 'left', margin: '40px' }}>
+        <h4 style={{ textAlign: "left", margin: "40px" }}>
           Membagikan bantuan makanan dan air bersih kepada pengungsi
         </h4>
       </div>
