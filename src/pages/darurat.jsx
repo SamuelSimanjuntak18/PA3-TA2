@@ -25,7 +25,7 @@ function Darurat() {
     formData.append('file', files);
     formData.append('user_id', JSON.parse(localStorage.getItem('user_data'))['id']);
     lapor(formData);
-    
+
   };
 
   const handleAvatarChange = (event) => { };
@@ -243,15 +243,15 @@ function Darurat() {
         >
           {/* <div style={{backgroundColor:"#0255A5"}}> */}
           <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control" encType="multipart/form-data">
-            <fieldset>
+            <fieldset style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25", borderRadius: "10px" }}>
               <legend>FORM PELAPORAN</legend>
               <h6 style={{ fontSize: "20px" }}>
                 {" "}
-                Jika anda ingin melaporkan berita terjadinya bencana alam,
-                Silakan melaporkannya melalui form dibawah ini.
+                Segera Laporkan Jika Ditemukan Bencana Disekitar Anda
+                Silakan Melaporkannya Melalui Form Dibawah Ini
               </h6>
               <br />
-              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{color:"red"}}> <b>No Telepon : 063221709</b> </span></h6>
+              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{ color: "red" }}> <b>No Telepon : 063221709</b> </span></h6>
               <hr className=""></hr>
               <div className="form-group">
                 <label htmlFor="option">Jenis Bencana</label>
@@ -323,8 +323,8 @@ function Darurat() {
               <button type="submit">Submit</button>
             </fieldset>
           </form>
-          </div>
         </div>
+      </div>
       {/* </div> */}
     </>
   );

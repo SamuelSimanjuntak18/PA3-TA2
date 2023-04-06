@@ -5,6 +5,12 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from '../assets/images/banjir.jpg';
 import PemetaanMaps from '../components/PemetaanMaps';
 import HujanImage from '../assets/images/hujan.png';
+import BerawanImage from '../assets/images/berawan.png';
+import KabutImage from '../assets/images/kabut.png';
+import HujanLebatImage from '../assets/images/hujan_lebat.png';
+import HujanSedangImage from '../assets/images/hujan_sedang.png';
+import '../styles/Home.css';
+
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -44,18 +50,18 @@ const Home = () => {
     const hour = dateString.substr(8, 2);
     const minute = dateString.substr(10, 2);
     const date = new Date(year, month, day, hour, minute);
-    const formattedDate = date.toLocaleString('en-US', {
+    const formattedDate = date.toLocaleString('id-ID', {
       year: 'numeric',
-      month: '2-digit',
+      month: 'long',
       day: '2-digit',
       hour: '2-digit',
       minute: '2-digit',
-      second: '2-digit',
-      hour12: false
+      // second: '',
+      hour12: false,
     });
 
     return formattedDate;
-  }
+  };
 
   return (
     <>
@@ -130,34 +136,40 @@ const Home = () => {
             <div className="col-md-7 mb-5">
               <h5 className="text-start mb-3 fw-bold">
                 PETA DAERAH RAWAN BENCANA
-              </h5>
+              </h5>            
               <PemetaanMaps />
             </div>
-            <div className="col-md-5">
-              <h5 className="text-start mb-3 fw-bold">PRAKIRAAN CUACA</h5>
-              <div
-                className="bg-white w-100 text-black text-start p-3 box-weather"
-              >
+            <div className="col-md-5 md-7">
+              <h5 className="text-start mb-3 fw-bold ">PRAKIRAAN CUACA</h5>
+              <div className="bg-primary w-100 text-white text-start p-3 box-weather shadow " style={{backgroundColor: '#0255A5'}}>
                 <h3>{weatherData.description}</h3>
-                <div className='d-flex overflow-auto'>
-                  {weatherDesc.times && weatherDesc.times.map((item, index) => (
-                    <div className="mt-5 ms-3 border px-3 cuaca-box" key={index}>
-                      <img
-                        src={
-                          item.name == 'Hujan Lebat'
-                            ? HujanImage
-                            : item.name == 'kabut'
-                              ? HujanImage
-                              : item.name == 'berawan'
-                                ? HujanImage
-                                : ''
-                        }
-                        alt=""
-                      />
-                      <p>{formatDate(item.datetime)}</p>
-                      <p>{item.name}</p>
-                    </div>
-                  ))}
+                <div className="d-flex overflow-auto shadow  ">
+                  {weatherDesc.times &&
+                    weatherDesc.times.map((item, index) => (
+                      <div
+                        className="mt-5 ms-3 border px-3 cuaca-box "
+                        key={index}
+                      >
+                        <img
+                          src={
+                            item.name === 'Hujan Lebat'
+                              ? HujanLebatImage
+                              : item.name === 'Kabut'
+                                ? KabutImage
+                                : item.name === 'Berawan'
+                                  ? BerawanImage
+                                  : item.name === 'Hujan Ringan'
+                                    ? HujanImage
+                                    : item.name === 'Hujan Sedang'
+                                      ? HujanSedangImage
+                                      : ''
+                          }
+                          alt=""
+                        />
+                        <p>{formatDate(item.datetime)}</p>
+                        <p>{item.name}</p>
+                      </div>
+                    ))}
                 </div>
                 {/* <p>{weatherData.params.id}</p> */}
               </div>
@@ -255,7 +267,7 @@ const Home = () => {
                           }}
                         >
                           <a
-                            href="/"
+                            href="/pengumuman"
                             style={{ textDecoration: 'none', color: 'white' }}
                           >
                             <strong>Baca Selengkapnya&gt;&gt;</strong>
@@ -288,7 +300,46 @@ const Home = () => {
                           }}
                         >
                           <a
-                            href="/"
+                            href="/pengumuman"
+                            style={{ textDecoration: 'none', color: 'white' }}
+                          >
+                            <strong>Baca Selengkapnya&gt;&gt;</strong>
+                          </a>
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="container">
+      <div className="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+        <div className="sharethis-sticky-share-buttons"></div>
+        <div className="col-md-12 ftco-animate"></div>
+      </div>
+    </div> */}
+                <div className="col-md-3">
+                  <div className="card" style={{ width: '18rem' }}>
+                    <img
+                      src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                      className="card-img-top"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">Card title</h5>
+                      <h6 className="card-subtitle mb-2 text-muted ">
+                        Card subtitle
+                      </h6>
+                      <p className="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                        <button
+                          className="btn btn-primary"
+                          style={{
+                            marginRight: '-50%',
+                            backgroundColor: '#0255A5',
+                          }}
+                        >
+                          <a
+                            href="/pengumuman"
                             style={{ textDecoration: 'none', color: 'white' }}
                           >
                             <strong>Baca Selengkapnya&gt;&gt;</strong>
@@ -321,40 +372,7 @@ const Home = () => {
                           }}
                         >
                           <a
-                            href="/"
-                            style={{ textDecoration: 'none', color: 'white' }}
-                          >
-                            <strong>Baca Selengkapnya&gt;&gt;</strong>
-                          </a>
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="card" style={{ width: '18rem' }}>
-                    <img
-                      src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                      className="card-img-top"
-                      alt="..."
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <h6 className="card-subtitle mb-2 text-muted ">
-                        Card subtitle
-                      </h6>
-                      <p className="card-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                        <button
-                          className="btn btn-primary"
-                          style={{
-                            marginRight: '-50%',
-                            backgroundColor: '#0255A5',
-                          }}
-                        >
-                          <a
-                            href="/"
+                            href="/pengumuman"
                             style={{ textDecoration: 'none', color: 'white' }}
                           >
                             <strong>Baca Selengkapnya&gt;&gt;</strong>

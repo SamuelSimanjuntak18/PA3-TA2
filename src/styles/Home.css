@@ -1,4 +1,4 @@
-.tombol {
+/* .tombol {
   position: absolute;
   width: 200px;
   left: 300px;
@@ -55,17 +55,49 @@
   height: 3px !important;
 }
 
-/* Track */
+
 .box-weather::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
-/* Handle */
+
 .box-weather::-webkit-scrollbar-thumb {
   background: #888; 
 }
 
-/* Handle on hover */
+
 .box-weather::-webkit-scrollbar-thumb:hover {
   background: #555; 
+} */
+
+.link-share{
+  position: absolute;
+  top: 40%;
+  /* background-color: white; */
+  padding: 10px;
+}
+
+.share-link-item{
+  transition: 0.5s;
+}
+
+.share-link-item:hover{
+  margin-left: 20px;
+}
+
+
+.cuaca-box {
+  animation: carousel 10s infinite;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
