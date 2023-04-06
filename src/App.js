@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavbarComponent } from "./components/NavbarComponent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Mitigasi from "./pages/Mitigasi";
 import Home from "./pages/Home.jsx";
 import login from "./pages/login";
