@@ -1,7 +1,7 @@
-import React from "react";
-import GoogleMapReact from "google-map-react";
-import { tobaCoordinates } from "../constants/maps";
-import Marker from "./maps/Marker";
+import React from 'react';
+import GoogleMapReact from 'google-map-react';
+import { tobaCoordinates } from '../constants/maps';
+import Marker from './maps/Marker';
 
 function PemetaanMaps() {
   const defaultProps = {
@@ -24,6 +24,7 @@ function PemetaanMaps() {
       >
         {tobaCoordinates.map((el, index) => (
           <Marker
+            key={index}
             lat={el.latitude}
             lng={el.longitude}
             desa={el.desa}

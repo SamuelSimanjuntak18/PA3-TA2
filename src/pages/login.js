@@ -15,7 +15,7 @@ function Login() {
     const isAuthenticated = localStorage.getItem('token') || null;
 
     if (isAuthenticated) {
-      history.push('/dashboard')
+      history.push('/')
     }
   }, []);
 
@@ -34,7 +34,7 @@ function Login() {
     const response = await login({ email: username, password: password });
     console.log(response === 200);
     if (response === 200) {
-      history.push("/dashboard");
+      history.push("/");
       setIsLoading(false);
     }
   };

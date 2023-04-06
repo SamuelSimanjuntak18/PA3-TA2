@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Button, Modal } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Card, Button, Modal } from 'react-bootstrap';
 
 const Cuaca = ({ title, description }) => {
   const [showModal, setShowModal] = useState(false);
@@ -14,10 +14,10 @@ const Cuaca = ({ title, description }) => {
 
   return (
     <div className="container">
-      <div class="row container">
-        <div class="col-md-4 container py-2">
+      <div className="row container">
+        <div className="col-md-4 container py-2">
           <br />
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: '18rem' }}>
             <img src="/assets/images/banjirr.jpg" alt="Logo Kebencanaan" />
             <Card.Body>
               <Card.Title>{title}</Card.Title>
@@ -36,11 +36,11 @@ const Cuaca = ({ title, description }) => {
                 <img
                   src="/assets/images/banjirr.jpg"
                   alt="Logo Kebencanaan"
-                  style={{ width: "300px", height: "200px" }}
-                />{" "}
+                  style={{ width: '300px', height: '200px' }}
+                />{' '}
                 <br /> <br />
               </center>
-              <button type="button" class="btn btn-warning">
+              <button type="button" className="btn btn-warning">
                 Pending
               </button>
 

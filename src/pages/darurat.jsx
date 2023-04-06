@@ -1,26 +1,31 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import BanjirImage from "../assets/images/report.png";
 import Card from "react-bootstrap/Card";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Report.css";
+import lapor from "../apis/laporan/laporan";
 
 function Darurat() {
-  // const [open, setOpen] = useState(true);
-  // const [opens, setOpens] = useState(false);
-  // const toggleOpen = () => {
-  //   setOpen(true);
-  //   setOpens(false);
-  // };
+  const jenis_bencana = useRef(null);
+  const lokasi = useRef(null);
+  const keterangan = useRef(null);
+  const nama_bencana = useRef(null);
+  const file = useRef(null);
 
-  // const toggleOpens = () => {
-  //   setOpens(true);
-  //   setOpen(false);
-  // };
   const [option, setOption] = useState("Bencana");
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Submit form data to server
+    const formData = new FormData();
+    formData.append('jenis_bencana', jenis_bencana.current.value);
+    formData.append('lokasi', lokasi.current.value);
+    formData.append('keterangan', keterangan.current.value);
+    formData.append('nama_bencana', nama_bencana.current.value);
+    var files = file.current.files[0];
+    formData.append('file', files);
+    formData.append('user_id', JSON.parse(localStorage.getItem('user_data'))['id']);
+    lapor(formData);
+
   };
 
   const handleAvatarChange = (event) => { };
@@ -100,8 +105,8 @@ function Darurat() {
         >
           <div id="">
             <div className="container">
-              <div class="row container">
-                <div class="col-md-4 container py-2">
+              <div className="row container">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -122,7 +127,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -143,7 +148,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -163,28 +168,7 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
-                  <Card
-                    style={{ width: "20rem", height: "22rem" }}
-                    className="cards  container"
-                  >
-                    <br />
-                    <Card.Title>
-                      <p> Dinas Pemadam Kebakaran</p>
-                    </Card.Title>
-                    <Card.Img
-                      variant="top"
-                      src="/assets/images/damkar.png"
-                      className="damkar"
-                    />
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      &nbsp;
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card>
-                </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -205,7 +189,28 @@ function Darurat() {
                     </button>
                   </Card>
                 </div>
-                <div class="col-md-4 container py-2">
+                <div className="col-md-4 container py-2">
+                  <Card
+                    style={{ width: "20rem", height: "22rem" }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div className="col-md-4 container py-2">
                   <Card
                     style={{ width: "20rem", height: "22rem" }}
                     className="cards  container"
@@ -231,22 +236,22 @@ function Darurat() {
           </div>
         </div>
         <div
-          class="tab-pane fade"
+          className="tab-pane fade"
           id="pills-profile"
           role="tabpanel"
           aria-labelledby="pills-profile-tab"
         >
           {/* <div style={{backgroundColor:"#0255A5"}}> */}
-          <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control">
-            <fieldset>
+          <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control" encType="multipart/form-data">
+            <fieldset style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25", borderRadius: "10px" }}>
               <legend>FORM PELAPORAN</legend>
               <h6 style={{ fontSize: "20px" }}>
                 {" "}
-                Jika anda ingin melaporkan berita terjadinya bencana alam,
-                Silakan melaporkannya melalui form dibawah ini.
+                Segera Laporkan Jika Ditemukan Bencana Disekitar Anda
+                Silakan Melaporkannya Melalui Form Dibawah Ini
               </h6>
               <br />
-              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{color:"red"}}> <b>No Telepon : 063221709</b> </span></h6>
+              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{ color: "red" }}> <b>No Telepon : 063221709</b> </span></h6>
               <hr className=""></hr>
               <div className="form-group">
                 <label htmlFor="option">Jenis Bencana</label>
@@ -255,10 +260,12 @@ function Darurat() {
                   value={option}
                   onChange={(event) => setOption(event.target.value)}
                   required
+                  ref={jenis_bencana}
+                  name="jenis_bencana"
                 >
-                  <option value="option1">Bencana Alam</option>
-                  <option value="option2">Bencana Non Alam</option>
-                  <option value="option3">Bencana Sosial </option>
+                  <option value="bencana alam">Bencana Alam</option>
+                  <option value="bencana non alam">Bencana Non Alam</option>
+                  <option value="bencana sosial">Bencana Sosial </option>
                 </select>
               </div>
               <div className="form-group">
@@ -266,7 +273,21 @@ function Darurat() {
                 <input
                   type="text"
                   id="name"
+                  name="lokasi"
                   placeholder="Lokasi Bencana"
+                  ref={lokasi}
+                  // onChange={(event) => setName(event.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="name">Nama Bencana</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="nama_bencana"
+                  placeholder="Lokasi Bencana"
+                  ref={nama_bencana}
                   // onChange={(event) => setName(event.target.value)}
                   required
                 />
@@ -276,13 +297,15 @@ function Darurat() {
                 <textarea
                   type="text"
                   id="keterangan"
+                  name="keterangan"
                   // value={deskripsi}
+                  ref={keterangan}
                   placeholder="Keterangan"
                   // onChange={(event) => setDeskripsi(event.target.value)}
                   required
                 />
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="number">Nomor Telepon</label>
                 <input
                   type="text"
@@ -291,17 +314,17 @@ function Darurat() {
                   // onChange={(event) => setNumber(event.target.value)}
                   required
                 />
-              </div>
+              </div> */}
               <div className="form-group">
                 <label htmlFor="gambar">Gambar</label>
-                <input type="file" id="gambar" onChange={handleAvatarChange} />
+                <input type="file" id="gambar" ref={file} onChange={handleAvatarChange} />
               </div>
               <br />
               <button type="submit">Submit</button>
             </fieldset>
           </form>
-          </div>
         </div>
+      </div>
       {/* </div> */}
     </>
   );
