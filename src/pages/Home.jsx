@@ -183,11 +183,94 @@
           </div>
         </section>
         <section className="bg-oranye text-black p-1">
+        <div className="container">
+          <div className="col-md-12">
+            <h4 style={{ color: "white", paddingTop: "20px", fontWeight: "bold" }}>BENCANA TERKINI</h4>
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="../assets/images/damkar.PNG" class="card-img-top" alt="..." />
+                  <div class="card-body text-start">
+                    <h5 class="card-title" style={{ fontWeight: "bold" }}>3 Tragedi Maut di Danau Toba dalam 5 Tahun Terakhir</h5>
+                    <p class="card-text">
+                      Senin, 24 Oktober 2022. Tim Badan Penanggulangan
+                      Bencana Daerah (BPBD) Kabupaten Toba bersama Basarnas Danau Toba...
+                    </p>
+                  </div>
+                  <button
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: '#0255A5',
+                    }}
+                  >
+                    <a
+                      href="/LaporanSelesai"
+                      style={{ textDecoration: 'none', color: 'white' }}
+                    >
+                      <strong>Baca Selengkapnya&gt;&gt;</strong>
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+               
+                  <img src="../assets/images/damkar.PNG"class="card-img-top" alt="..." />
+                  <div class="card-body text-start">
+                    <h5 class="card-title">Kebakaran Hutan di Sekitar Danau Toba Meluas</h5>
+                    <p class="card-text">
+                      Rabu, 17 Februari 2021. Akibat cuaca panas di Kabupaten Toba,
+                      pihak Badan Penanggulangan Bencana Daerah (BPBD) setempat ...
+                    </p>
+                  </div>
+                  <button
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: '#0255A5',
+                    }}
+                  >
+                    <a
+                      href="/LaporanSelesai"
+                      style={{ textDecoration: 'none', color: 'white' }}
+                    >
+                      <strong>Baca Selengkapnya&gt;&gt;</strong>
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <img src="../assets/images/damkar.PNG" class="card-img-top" alt="..." />
+                  <div class="card-body text-start">
+                    <h5 class="card-title">BPBD Kab. Toba Melakukan Penyemprotan Disinfektan di Desa Paindoan Kec. Balige</h5>
+                    <p class="card-text">
+                      Sabtu, 30 April 2020. Badan Penanggulangan Bencana Daerah (BPBD)
+                      Kabupaten toba melakukan penyemprotan disinfektan ...
+                    </p>
+                  </div>
+                  <button
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: '#0255A5',
+                    }}
+                  >
+                    <a
+                      href="/LaporanSelesai"
+                      style={{ textDecoration: 'none', color: 'white' }}
+                    >
+                      <strong>Baca Selengkapnya&gt;&gt;</strong>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
           {/* <div className="container">
             <div className="col-md-12">
               <h5 className="fw-bold my-5">Prakiraan Cuaca</h5>
               <div className="mb-5 box-cuaca"> */}
-          <div className="container">
+          {/* <div className="container">
             <div className="col-md-12 mt-5 mb-5">
               <div className="fw-my-5 box-cuaca">
                 {' '}
@@ -236,7 +319,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
         <section className="bg-blue p-1">
           <div className="container">
@@ -278,13 +361,13 @@
                     </div>
                   </div>
                   <div className="col-md-3">
-                    <div className="card" style={{ width: '18rem' }}>
+                  <div className="card" style={{ width: '18rem' }}>
                       <img
                         src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
                         className="card-img-top"
                         alt="..."
                       />
-                      <div className="card-body text-start">
+                      <div className="card-body">
                         <h5 className="card-title">Card title</h5>
                         <h6 className="card-subtitle mb-2 text-muted ">
                           Card subtitle

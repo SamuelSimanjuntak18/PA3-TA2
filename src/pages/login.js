@@ -42,7 +42,7 @@ function Login() {
   return (
     <div className="login-page">
       <div className="login-box">
-        <img src="/logo.png" alt="Logo Kebencanaan" className="login-logo" />
+        <img src="../assets/images/logo.PNG" alt="Logo Kebencanaan" className="login-logo" />
         <br />
         <strong>Badan Penanggulangan Bencana Daerah</strong>
 

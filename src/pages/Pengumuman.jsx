@@ -15,7 +15,7 @@ import { faPencilAlt, faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 const Pengumuman = () => {
   const shareUrl = "https://bnpb.go.id/berita/banjir-bandang-terjang-sumbawa-belasan-rumah-hanyut-dan-hewan-ternak-mati";
-
+  // const shareUrl = window.location.href;
   return (
     <>
       <br />
@@ -144,20 +144,6 @@ const Pengumuman = () => {
             <EmailIcon size={45} round={true} />
           </EmailShareButton>
         </div>
-        {/* <div className="row no-gutters slider-text js-fullheight align-items-center " data-scrollax-parent="true">
-          <div className="col-md-3 share-buttons-wrapper d-flex flex-column justify-content-start ml-9">
-            <FacebookShareButton url={shareUrl}>
-              {shareUrl => <span className="myShareCountWrapper">{shareUrl}</span>}
-              <FacebookIcon />
-            </FacebookShareButton>
-            <WhatsappShareButton url={shareUrl}>
-              {shareUrl => <span className="myShareCountWrapper">{shareUrl}</span>}
-              <WhatsappIcon />
-            </WhatsappShareButton>
-          </div>
-          <div className="col-md-9 ftco-animate"> 
-          </div>
-        </div> */}
       </div>
     </>
   );

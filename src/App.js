@@ -8,7 +8,7 @@ import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import Mitigasi from "./pages/Mitigasi";
 import Home from "./pages/Home.jsx";
 import login from "./pages/login";
-import register from "./pages/register";
+import register from "./pages/register.jsx";
 // import Report from './pages/Report.jsx';
 import darurat from "../src/pages/darurat.jsx";
 import Detail_Laporan from "./pages/Detail_Laporan";

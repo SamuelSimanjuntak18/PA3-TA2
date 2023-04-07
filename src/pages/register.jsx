@@ -38,7 +38,8 @@ const Register = () => {
 
   return (
     <>
-      <img src="/logo.png" alt="Logo Kebencanaan" className="login-logo" />
+     <div className="register-page">
+      <img src="../assets/images/logo.PNG" alt="Logo Kebencanaan" className="login-logo" />
       <br />
       <strong>Badan Penanggulangan Bencana Daerah</strong>
       <br />
@@ -125,8 +126,11 @@ const Register = () => {
           </div>
           <button type="submit">Register</button>
         </form>
+      </div>\
+      <br />
       </div>
-    </>
+   </>
+   
   );
 };
 

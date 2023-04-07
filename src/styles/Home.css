@@ -101,3 +101,17 @@
     transform: translateX(0);
   }
 }
+.col-md-4 img{
+  width: 100%;
+  height: 250px;
+ }
+
+ .col-md-4{
+  margin: 30px 0;
+ }
+
+ /* .col-md-4 button{
+  width: 200px;
+  margin-left: 150px;
+  background-color: #0255A5;
+ } */

@@ -8,7 +8,7 @@ function laporanSelesai() {
       </center>
       <center>
         <div
-          className="panel panel-default 1px"
+          className="panel panel-default"
           style={{ textAlign: "left", margin: "40px", width: "80%" }}
         >
           <div className="panel-body">
