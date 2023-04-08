@@ -1,5 +1,8 @@
+import ReportDetail from '../pages/ReportDetail';
 import React, { useState, useEffect } from 'react';
+import { Link, Route, Router, Switch } from 'react-router-dom';
 import { instance } from '../apis/axios';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 function NewestReport() {
   const [reports, setReports] = useState([]);
@@ -22,7 +25,7 @@ function NewestReport() {
           <div className="my-5">
             <h4 className="mb-5">LAPORAN MASYARAKAT</h4>
             <div className="row">
-              {reports &&
+              {reports ? (
                 reports.slice(0, 3).map((report) => (
                   <div className="col-md-4 mb-3" key={report.id}>
                     <div className="card text-start" style={{ padding: '0px' }}>
@@ -36,6 +39,13 @@ function NewestReport() {
                           {report.attributes.nama_bencana}
                         </h6>
                         <p className="card-subtitle mb-2 text-muted ">
+                          {new Date(
+                            report.attributes.created_at
+                          ).toLocaleDateString('id-ID', {
+                            dateStyle: 'full',
+                          })}
+                        </p>
+                        <p className="text-secondary fw-light mt-3">
                           {report.attributes.keterangan}
                         </p>
                         <button
@@ -44,17 +54,22 @@ function NewestReport() {
                             backgroundColor: '#0255A5',
                           }}
                         >
-                          <a
-                            href={`/reports/${report.id}`}
+                          <Link
+                            to={`/reports/${report.id}`}
                             style={{ textDecoration: 'none', color: 'white' }}
                           >
                             <strong>Baca Selengkapnya</strong>
-                          </a>
+                          </Link>
                         </button>
                       </div>
                     </div>
                   </div>
-                ))}
+                ))
+              ) : (
+                <>
+                  <p>Loading</p>
+                </>
+              )}
             </div>
           </div>
         </div>
