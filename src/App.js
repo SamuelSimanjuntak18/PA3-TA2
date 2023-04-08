@@ -5,10 +5,10 @@ import { NavbarComponent } from './components/NavbarComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Mitigasi from "./pages/Mitigasi";
-import Home from "./pages/Home.jsx";
-import login from "./pages/login";
-import register from "./pages/register.jsx";
+import Mitigasi from './pages/Mitigasi';
+import Home from './pages/Home.jsx';
+import login from './pages/login';
+import register from './pages/register.jsx';
 // import Report from './pages/Report.jsx';
 import darurat from '../src/pages/darurat.jsx';
 import Detail_Laporan from './pages/Detail_Laporan';
@@ -51,12 +51,14 @@ function App() {
               {/* <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
               <FontAwesomeIcon icon={faEnvelope} />
             </div> */}
-              <div className="button-urgent animasi rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
+              <div>
                 <a
                   href="/darurat"
                   style={{ textDecoration: 'none', color: 'white' }}
                 >
-                  <FontAwesomeIcon icon={faPhoneVolume} />
+                  <div className="button-urgent animasi rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
+                    <FontAwesomeIcon icon={faPhoneVolume} />
+                  </div>
                 </a>
               </div>
             </div>
