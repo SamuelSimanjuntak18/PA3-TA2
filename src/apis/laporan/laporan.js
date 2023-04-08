@@ -10,7 +10,7 @@ async function lapor(data) {
   return await instance
     .post('/laporan/bencanas', data)
     .then((response) => {
-      console.log(response);
+      return { data: response.data, status: response.status };
     })
     .catch((error) => {
       const { message } = error.response.data;
