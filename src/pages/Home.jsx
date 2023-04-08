@@ -10,7 +10,7 @@ import KabutImage from '../assets/images/kabut.png';
 import HujanLebatImage from '../assets/images/hujan_lebat.png';
 import HujanSedangImage from '../assets/images/hujan_sedang.png';
 import '../styles/Home.css';
-
+import NewestReport from '../components/NewestReport';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -31,17 +31,6 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await axios.get(
-  //       'https://cuaca-gempa-rest-api.vercel.app/weather/sumatera-utara/balige'
-  //     );
-  //     setWeatherData(response.data);
-  //     console.log(response.data.data);
-  //   };
-  //   fetchData();
-  // }, []);
 
   const formatDate = (dateString) => {
     const year = dateString.substr(0, 4);
@@ -107,7 +96,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className="col-md-12">
           <div className="box d-flex justify-content-center align-items-center">
@@ -129,19 +117,21 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       <section className="bg-blue p-1 text-white">
         <div className="container mt-5 mb-5">
           <div className="row">
             <div className="col-md-7 mb-5">
               <h5 className="text-start mb-3 fw-bold">
                 PETA DAERAH RAWAN BENCANA
-              </h5>            
+              </h5>
               <PemetaanMaps />
             </div>
             <div className="col-md-5 md-7">
               <h5 className="text-start mb-3 fw-bold ">PRAKIRAAN CUACA</h5>
-              <div className="bg-primary w-100 text-white text-start p-3 box-weather shadow " style={{backgroundColor: '#0255A5'}}>
+              <div
+                className="bg-primary w-100 text-white text-start p-3 box-weather shadow "
+                style={{ backgroundColor: '#0255A5' }}
+              >
                 <h3>{weatherData.description}</h3>
                 <div className="d-flex overflow-auto shadow  ">
                   {weatherDesc.times &&
@@ -155,14 +145,14 @@ const Home = () => {
                             item.name === 'Hujan Lebat'
                               ? HujanLebatImage
                               : item.name === 'Kabut'
-                                ? KabutImage
-                                : item.name === 'Berawan'
-                                  ? BerawanImage
-                                  : item.name === 'Hujan Ringan'
-                                    ? HujanImage
-                                    : item.name === 'Hujan Sedang'
-                                      ? HujanSedangImage
-                                      : ''
+                              ? KabutImage
+                              : item.name === 'Berawan'
+                              ? BerawanImage
+                              : item.name === 'Hujan Ringan'
+                              ? HujanImage
+                              : item.name === 'Hujan Sedang'
+                              ? HujanSedangImage
+                              : ''
                           }
                           alt=""
                         />
@@ -182,62 +172,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-oranye text-black p-1">
-        {/* <div className="container">
-          <div className="col-md-12">
-            <h5 className="fw-bold my-5">Prakiraan Cuaca</h5>
-            <div className="mb-5 box-cuaca"> */}
-        <div className="container">
-          <div className="col-md-12 mt-5 mb-5">
-            <div className="fw-my-5 box-cuaca">
-              {' '}
-              <br />
-              <h4> LAPORAN MASYARAKAT</h4>
-              <div className="row">
-                <div className="col-8">
-                  <p style={{ textAlign: 'left', marginLeft: '60px' }}>
-                    <strong>29 Maret 2023</strong>
-                  </p>
-                  <h3 style={{ textAlign: 'left', marginLeft: '60px' }}>
-                    Banjir
-                  </h3>
-                  <p
-                    style={{
-                      textAlign: 'left',
-                      marginLeft: '60px',
-                      fontFamily: 'inter',
-                      fontSize: '20px',
-                    }}
-                  >
-                    Banjir akibat selokan yang dipenuhi dengan sampah dapat
-                    menjadi bencana lingkungan yang serius dan mengancam
-                    kehidupan manusia serta hewan yang tinggal di sekitar area
-                    tersebut.
-                  </p>
-                  <button
-                    className="btn btn-primary"
-                    style={{ marginLeft: '-62.6%', backgroundColor: '#0255A5' }}
-                  >
-                    <a
-                      href="/laporanSelesai"
-                      style={{ textDecoration: 'none', color: 'white' }}
-                    >
-                      <strong>Baca Selengkapnya&gt;&gt;</strong>
-                    </a>
-                  </button>
-                </div>
-                <div className="col-4">
-                  <img
-                    src="/assets/images/banjirr.jpg"
-                    alt="Logo Kebencanaan"
-                    style={{ width: '270px', height: '300px' }}
-                  />{' '}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NewestReport />
       <section className="bg-blue p-1">
         <div className="container">
           <div className="row">
