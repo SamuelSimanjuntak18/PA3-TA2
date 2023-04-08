@@ -16,8 +16,8 @@ function laporanSelesai(props) {
       </center>
       <center>
         <div
-          className="panel panel-default 1px"
-          style={{ textAlign: 'left', margin: '40px', width: '80%' }}
+          className="panel panel-default"
+          style={{ textAlign: "left", margin: "40px", width: "80%" }}
         >
           <div className="panel-body">
             <div className="tab-content">

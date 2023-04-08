@@ -4,6 +4,16 @@
     height: 100%;
 }
 
+@media(max-width:670px){
+    .footer{
+        height: 1000%;
+    }
+
+    .col-lg-1 img{
+        float: left;
+    }
+}
+
 .col-lg-1 {
     text-align: center;
     /* font-weight: medium; */
@@ -41,3 +51,4 @@
 .col-lg-2 a:hover {
     color: #FE9705;
 }
+

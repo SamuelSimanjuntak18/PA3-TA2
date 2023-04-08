@@ -31,6 +31,14 @@ body {
 
 }
 
+@media(max-width:670px){
+  .navbar{
+    height: 100%;
+  }
+
+  
+}
+
 .brand-bold {
   font-size: 14px;
   font-weight: bold;
@@ -47,6 +55,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .warning {
   border: 1px solid #ccc;
