@@ -18,6 +18,7 @@
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-loading-skeleton": "^3.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-share": "^4.4.1",
@@ -28,9 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "react-scripts --openssl-legacy-provider build"
   },
   "eslintConfig": {
     "extends": [
