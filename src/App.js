@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { NavbarComponent } from "./components/NavbarComponent";
+import NavbarComponent from './components/NavbarComponent';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -46,12 +46,12 @@ function App() {
             {/* <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
               <FontAwesomeIcon icon={faEnvelope} />
             </div> */}
+             <a href="/darurat" style={{ textDecoration: "none", color: "white" }}>
             <div className="button-urgent animasi rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
-  
-  <a href="/darurat" style={{ textDecoration: "none", color: "white" }}>
-  <FontAwesomeIcon icon={faPhoneVolume} />
-  </a>
+   <FontAwesomeIcon icon={faPhoneVolume} />
+ 
 </div>
+</a>
 
           </div>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 
+
+
 export const NavbarComponent = () => {
   return (
     <Navbar variant="dark" expand="lg">
@@ -43,6 +45,7 @@ export const NavbarComponent = () => {
             </NavDropdown>
             <Nav.Link href="Profil">Profil</Nav.Link>
             <Nav.Link href="login">Masuk</Nav.Link>
+    
           </Nav>
         </Navbar.Collapse>
       </Container>

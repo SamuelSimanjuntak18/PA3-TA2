@@ -8,6 +8,7 @@ import '../styles/mitigasi.css';
 
 function Mitigasi() {
   return (
+    
     <div className="position-relative">
       <div className="container">
         <div className="caption-image">
@@ -137,7 +138,9 @@ function Mitigasi() {
           </div>
         </div>
       </div>
+      
     </div>
+    
   );
 }
 

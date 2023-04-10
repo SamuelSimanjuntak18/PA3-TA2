@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
-import BanjirImage from "../assets/images/report.png";
-import Card from "react-bootstrap/Card";
-import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styles/Report.css";
-import lapor from "../apis/laporan/laporan";
+import React, { useRef, useState } from 'react';
+import BanjirImage from '../assets/images/report.png';
+import Card from 'react-bootstrap/Card';
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/Report.css';
+import lapor from '../apis/laporan/laporan';
+import Swal from 'sweetalert2';
 
 function Darurat() {
   const jenis_bencana = useRef(null);
@@ -13,22 +14,66 @@ function Darurat() {
   const nama_bencana = useRef(null);
   const file = useRef(null);
 
-  const [option, setOption] = useState("Bencana");
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append('jenis_bencana', jenis_bencana.current.value);
-    formData.append('lokasi', lokasi.current.value);
-    formData.append('keterangan', keterangan.current.value);
-    formData.append('nama_bencana', nama_bencana.current.value);
-    var files = file.current.files[0];
-    formData.append('file', files);
-    formData.append('user_id', JSON.parse(localStorage.getItem('user_data'))['id']);
-    lapor(formData);
+  const [option, setOption] = useState('Bencana');
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (
+      !jenis_bencana.current.value ||
+      !lokasi.current.value ||
+      !keterangan.current.value ||
+      !nama_bencana.current.value ||
+      !file.current.value
+    ) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Please fill all input fields',
+        timer: 2000, // set the duration for the message to show
+        showConfirmButton: false, // hide the "OK" button
+      });
+    } else {
+      const formData = new FormData();
+      formData.append('jenis_bencana', jenis_bencana.current.value);
+      formData.append('lokasi', lokasi.current.value);
+      formData.append('keterangan', keterangan.current.value);
+      formData.append('nama_bencana', nama_bencana.current.value);
+      var files = file.current.files[0];
+      formData.append('file', files);
+      formData.append(
+        'user_id',
+        JSON.parse(localStorage.getItem('user_data'))['id']
+      );
+
+      const response = await lapor(formData);
+
+      const { data, status } = response;
+
+      if (status >= 200 && status < 300) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Form submitted successfully!',
+          timer: 2000, // set the duration for the message to show
+          showConfirmButton: false, // hide the "OK" button
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title:
+            'There was an error submitting your report. Please try again later',
+          timer: 2000, // set the duration for the message to show
+          showConfirmButton: false, // hide the "OK" button
+        });
+      }
+
+      jenis_bencana.current.value = '';
+      lokasi.current.value = '';
+      keterangan.current.value = '';
+      nama_bencana.current.value = '';
+      file.current.value = '';
+    }
   };
 
-  const handleAvatarChange = (event) => { };
+  const handleAvatarChange = (event) => {};
 
   return (
     <>
@@ -40,20 +85,20 @@ function Darurat() {
               <div className="position-absolute w-100">
                 <h1
                   style={{
-                    fontFamily: "Roboto",
-                    fontStyle: "normal",
-                    fontSize: "70px",
-                    fontWeight: "700",
+                    fontFamily: 'Roboto',
+                    fontStyle: 'normal',
+                    fontSize: '70px',
+                    fontWeight: '700',
                   }}
                 >
                   LAPOR
                 </h1>
                 <p
                   style={{
-                    fontWeight: "300",
-                    fontFamily: "Roboto",
-                    fontStyle: "normal",
-                    fontSize: "25px",
+                    fontWeight: '300',
+                    fontFamily: 'Roboto',
+                    fontStyle: 'normal',
+                    fontSize: '25px',
                   }}
                 >
                   Siap Membantu Masyarakat Dalam Situasi Gawat Darurat
@@ -108,7 +153,7 @@ function Darurat() {
               <div className="row container">
                 <div className="col-md-4 container py-2">
                   <Card
-                    style={{ width: "20rem", height: "22rem" }}
+                    style={{ width: '20rem', height: '22rem' }}
                     className="cards  container"
                   >
                     <br />
@@ -129,7 +174,7 @@ function Darurat() {
                 </div>
                 <div className="col-md-4 container py-2">
                   <Card
-                    style={{ width: "20rem", height: "22rem" }}
+                    style={{ width: '20rem', height: '22rem' }}
                     className="cards  container"
                   >
                     <br />
@@ -150,7 +195,7 @@ function Darurat() {
                 </div>
                 <div className="col-md-4 container py-2">
                   <Card
-                    style={{ width: "20rem", height: "22rem" }}
+                    style={{ width: '20rem', height: '22rem' }}
                     className="cards  container"
                   >
                     <Card.Title>
@@ -170,28 +215,7 @@ function Darurat() {
                 </div>
                 <div className="col-md-4 container py-2">
                   <Card
-                    style={{ width: "20rem", height: "22rem" }}
-                    className="cards  container"
-                  >
-                    <br />
-                    <Card.Title>
-                      <p> Dinas Pemadam Kebakaran</p>
-                    </Card.Title>
-                    <Card.Img
-                      variant="top"
-                      src="/assets/images/damkar.png"
-                      className="damkar"
-                    />
-                    <button className="darurat">
-                      <FontAwesomeIcon icon={faPhoneVolume} />
-                      &nbsp;
-                      <strong>0811 6212 119</strong>
-                    </button>
-                  </Card>
-                </div>
-                <div className="col-md-4 container py-2">
-                  <Card
-                    style={{ width: "20rem", height: "22rem" }}
+                    style={{ width: '20rem', height: '22rem' }}
                     className="cards  container"
                   >
                     <br />
@@ -212,7 +236,28 @@ function Darurat() {
                 </div>
                 <div className="col-md-4 container py-2">
                   <Card
-                    style={{ width: "20rem", height: "22rem" }}
+                    style={{ width: '20rem', height: '22rem' }}
+                    className="cards  container"
+                  >
+                    <br />
+                    <Card.Title>
+                      <p> Dinas Pemadam Kebakaran</p>
+                    </Card.Title>
+                    <Card.Img
+                      variant="top"
+                      src="/assets/images/damkar.png"
+                      className="damkar"
+                    />
+                    <button className="darurat">
+                      <FontAwesomeIcon icon={faPhoneVolume} />
+                      &nbsp;
+                      <strong>0811 6212 119</strong>
+                    </button>
+                  </Card>
+                </div>
+                <div className="col-md-4 container py-2">
+                  <Card
+                    style={{ width: '20rem', height: '22rem' }}
                     className="cards  container"
                   >
                     <br />
@@ -242,16 +287,33 @@ function Darurat() {
           aria-labelledby="pills-profile-tab"
         >
           {/* <div style={{backgroundColor:"#0255A5"}}> */}
-          <form onSubmit={handleSubmit} style={{ paddingBottom: "100px" }} className="control" encType="multipart/form-data">
-            <fieldset style={{ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25", borderRadius: "10px" }}>
+          <form
+            onSubmit={handleSubmit}
+            style={{ paddingBottom: '100px' }}
+            className="control"
+            encType="multipart/form-data"
+          >
+            <fieldset
+              style={{
+                boxShadow:
+                  '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25',
+                borderRadius: '10px',
+              }}
+            >
               <legend>FORM PELAPORAN</legend>
-              <h6 style={{ fontSize: "20px" }}>
-                {" "}
-                Segera Laporkan Jika Ditemukan Bencana Disekitar Anda
-                Silakan Melaporkannya Melalui Form Dibawah Ini
+              <h6 style={{ fontSize: '20px' }}>
+                {' '}
+                Segera Laporkan Jika Ditemukan Bencana Disekitar Anda Silakan
+                Melaporkannya Melalui Form Dibawah Ini
               </h6>
               <br />
-              <h6 style={{ fontSize: "20px" }}>Hubungi No Berikut : <span style={{ color: "red" }}> <b>No Telepon : 063221709</b> </span></h6>
+              <h6 style={{ fontSize: '20px' }}>
+                Hubungi No Berikut :{' '}
+                <span style={{ color: 'red' }}>
+                  {' '}
+                  <b>No Telepon : 063221709</b>{' '}
+                </span>
+              </h6>
               <hr className=""></hr>
               <div className="form-group">
                 <label htmlFor="option">Jenis Bencana</label>
@@ -263,6 +325,7 @@ function Darurat() {
                   ref={jenis_bencana}
                   name="jenis_bencana"
                 >
+                  <option value="">-- Pilih Jenis Bencana --</option>
                   <option value="bencana alam">Bencana Alam</option>
                   <option value="bencana non alam">Bencana Non Alam</option>
                   <option value="bencana sosial">Bencana Sosial </option>
@@ -317,7 +380,12 @@ function Darurat() {
               </div> */}
               <div className="form-group">
                 <label htmlFor="gambar">Gambar</label>
-                <input type="file" id="gambar" ref={file} onChange={handleAvatarChange} />
+                <input
+                  type="file"
+                  id="gambar"
+                  ref={file}
+                  onChange={handleAvatarChange}
+                />
               </div>
               <br />
               <button type="submit">Submit</button>
