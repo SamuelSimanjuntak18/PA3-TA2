@@ -51,7 +51,7 @@ function Darurat() {
       if (status >= 200 && status < 300) {
         Swal.fire({
           icon: 'success',
-          title: 'Form submitted successfully!',
+          title: 'Berhasil Menambahkan Laporan',
           timer: 2000, // set the duration for the message to show
           showConfirmButton: false, // hide the "OK" button
         });

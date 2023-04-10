@@ -23,7 +23,7 @@ function NewestReport() {
       <div className="container">
         <div className="col-md-12 mt-5 mb-5">
           <div className="my-5">
-            <h4 className="mb-5">LAPORAN MASYARAKAT</h4>
+            <h4 className="mb-5 text-white">Bencana Terkini </h4>
             <div className="row">
               {reports ? (
                 reports.slice(0, 3).map((report) => (

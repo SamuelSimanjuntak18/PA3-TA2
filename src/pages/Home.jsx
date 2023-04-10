@@ -63,14 +63,12 @@ const Home = () => {
               <p className="subtext-hero">
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
-              <button className="btn-custom-danger">
-                <a
+              <a
                   href="/darurat"
                   style={{ textDecoration: 'none', color: 'white' }}
-                >
-                  <strong>LAPOR!</strong>
+                > <button className="btn-custom-danger">
+                  <strong>LAPOR!</strong></button>
                 </a>
-              </button>
             </div>
             <div className="col-md-6 col-sm-7 right-hero">
               <div className="box d-flex justify-content-center align-items-center">
@@ -96,7 +94,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="col-md-12">
           <div className="box d-flex justify-content-center align-items-center">
             <div className="peringatan-dini text-white">
@@ -116,7 +114,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className="bg-blue p-1 text-white">
         <div className="container mt-5 mb-5">
           <div className="row">
