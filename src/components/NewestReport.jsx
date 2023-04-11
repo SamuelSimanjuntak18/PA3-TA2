@@ -1,8 +1,6 @@
-import ReportDetail from '../pages/ReportDetail';
 import React, { useState, useEffect } from 'react';
-import { Link, Route, Router, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { instance } from '../apis/axios';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 function NewestReport() {
   const [reports, setReports] = useState([]);

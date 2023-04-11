@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from '../assets/images/banjir.jpg';
@@ -11,11 +10,14 @@ import HujanLebatImage from '../assets/images/hujan_lebat.png';
 import HujanSedangImage from '../assets/images/hujan_sedang.png';
 import '../styles/Home.css';
 import NewestReport from '../components/NewestReport';
+import { instance } from 'apis/axios';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
 
   const [weatherDesc, setWeatherDesc] = useState([]);
+
+  const [peringatanDini, setPeringatanDini] = useState([]);
 
   const fetchData = async () => {
     const response = await fetch(
@@ -30,7 +32,17 @@ const Home = () => {
 
   useEffect(() => {
     fetchData();
+    instance
+      .get('/peringatan/dini')
+      .then((response) => {
+        setPeringatanDini(response.data.data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+
+  console.log(peringatanDini);
 
   const formatDate = (dateString) => {
     const year = dateString.substr(0, 4);
@@ -64,11 +76,14 @@ const Home = () => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <a
-                  href="/darurat"
-                  style={{ textDecoration: 'none', color: 'white' }}
-                > <button className="btn-custom-danger">
-                  <strong>LAPOR!</strong></button>
-                </a>
+                href="/darurat"
+                style={{ textDecoration: 'none', color: 'white' }}
+              >
+                {' '}
+                <button className="btn-custom-danger">
+                  <strong>LAPOR!</strong>
+                </button>
+              </a>
             </div>
             <div className="col-md-6 col-sm-7 right-hero">
               <div className="box d-flex justify-content-center align-items-center">
@@ -80,12 +95,16 @@ const Home = () => {
                   <hr className="hr-peringatan" />
                   <div className="p-3 fs-6">
                     <b style={{ fontFamily: 'Inter' }}>
-                      18 Februari 2023 | Laguboti
+                      {new Date(peringatanDini.tanggal).toLocaleDateString(
+                        'id-ID',
+                        {
+                          dateStyle: 'full',
+                        }
+                      )}{' '}
+                      | {peringatanDini.lokasi}
                     </b>
-                    <p style={{ fontFamily: 'Inter' }}>
-                      Waspada potensi hujan sedang hingga lebat disertai
-                      kilat/petir dan angin kencang pada sore hingga dini hari
-                      di wilayah laguboti Sitoluama dan Sekitarnya.
+                    <p style={{ fontFamily: 'Inter' }} className="mt-3">
+                      {peringatanDini.deskripsi}
                     </p>
                   </div>
                 </div>
@@ -94,27 +113,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <div className="col-md-12">
-          <div className="box d-flex justify-content-center align-items-center">
-            <div className="peringatan-dini text-white">
-              <FontAwesomeIcon
-                icon={faTriangleExclamation}
-                className="warning-icon"
-              />
-              <hr className="hr-peringatan" />
-              <div className="p-3 fs-6">
-                <b>18 Februari 2023 | Laguboti</b>
-                <p>
-                  Waspada potensi hujan sedang hingga lebat disertai kilat/petir
-                  dan angin kencang pada sore hingga dini hari di wilayah
-                  laguboti Sitoluama dan Sekitarnya.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <section className="bg-blue p-1 text-white">
         <div className="container mt-5 mb-5">
           <div className="row">
