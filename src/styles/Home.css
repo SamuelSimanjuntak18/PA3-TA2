@@ -28,21 +28,7 @@
 
 }
 
-.warnings {
-  position: absolute;
-  width: 412px;
-  height: 19px;
-  left: 200px;
-  top: 236px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: #FFFFFF;
-  text-align: center;
 
-}
 
 .cuaca-box{
   width: 200px !important;
@@ -109,7 +95,7 @@
  .col-md-4{
   margin: 30px 0;
  }
-
+ 
  /* .col-md-4 button{
   width: 200px;
   margin-left: 150px;

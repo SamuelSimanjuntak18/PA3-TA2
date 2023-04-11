@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -51,7 +52,8 @@ function App() {
               {/* <div className="button-urgent rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
               <FontAwesomeIcon icon={faEnvelope} />
             </div> */}
-              <div>
+
+              <div className="button-urgent animasi rounded-circle d-flex justify-content-center align-items-center text-white fs-6">
                 <a
                   href="/darurat"
                   style={{ textDecoration: 'none', color: 'white' }}
