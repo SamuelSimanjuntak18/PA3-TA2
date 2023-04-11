@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
@@ -16,24 +16,31 @@ import Detail_Laporan from './pages/Detail_Laporan';
 import Footer from '../src/components/Footer';
 import laporanSelesai from './pages/laporanSelesai';
 import Pengumuman from './pages/Pengumuman';
-import NewestReport from '../src/components/NewestReport';
 import ReportDetail from './pages/ReportDetail';
 import { SkeletonTheme } from 'react-loading-skeleton';
-// import Dashboard from "pages/admin/Dashboard";
-// import PrivateRoute from "utils/PrivateRoute";
+import MitigasiDetail from './pages/MitigasiDetail';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    setIsLoggedIn(token ? true : false);
+  })
+
   return (
     <div className="App">
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
         <div className="app-header">
-          <NavbarComponent />
+          <NavbarComponent isLoggedIn={isLoggedIn}/>
         </div>
         <Router>
           <Switch>
             <div className="app-content">
               <Route path="/" exact component={Home} />
               <Route path="/Mitigasi" exact component={Mitigasi} />
+              <Route path="/mitigasi/:id" exact component={MitigasiDetail} />
               {/* <Route path="/report" exact component={Report} /> */}
               <Route path="/login" exact component={login} />
               <Route path="/register" exact component={register} />
