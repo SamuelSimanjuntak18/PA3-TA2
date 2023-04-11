@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import Card from 'react-bootstrap/Card';
 // import { CardGroup } from 'react-bootstrap';
 import MitigasiBencana from '../assets/images/mitigasi bencana.png';
 import EdukasiGempa from '../assets/images/edukasi gempa.png';
 import PeringatanDini from '../assets/images/peringatan dini.png';
 import '../styles/mitigasi.css';
+import { instance } from '../apis/axios';
 
 function Mitigasi() {
+  const [mitigasi, setMitigasi] = useState([]);
+
+  useEffect(() => {
+    instance
+      .get('/mitigasi/bencana')
+      .then((response) => {
+        setMitigasi(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="position-relative">
       <div className="container">
