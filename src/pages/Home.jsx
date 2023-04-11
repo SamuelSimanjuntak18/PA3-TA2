@@ -11,11 +11,14 @@ import HujanLebatImage from '../assets/images/hujan_lebat.png';
 import HujanSedangImage from '../assets/images/hujan_sedang.png';
 import '../styles/Home.css';
 import NewestReport from '../components/NewestReport';
+import { instance } from 'apis/axios';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
 
   const [weatherDesc, setWeatherDesc] = useState([]);
+
+  const [peringatanDini, setPeringatanDini] = useState([]);
 
   const fetchData = async () => {
     const response = await fetch(
@@ -30,7 +33,17 @@ const Home = () => {
 
   useEffect(() => {
     fetchData();
+    instance
+      .get('/peringatan/dini')
+      .then((response) => {
+        setPeringatanDini(response.data.data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+
+  console.log(peringatanDini);
 
   const formatDate = (dateString) => {
     const year = dateString.substr(0, 4);
@@ -64,11 +77,14 @@ const Home = () => {
                 Sampaikan Laporan Peristiwa Darurat di Sekitar Anda!
               </p>
               <a
-                  href="/darurat"
-                  style={{ textDecoration: 'none', color: 'white' }}
-                > <button className="btn-custom-danger">
-                  <strong>LAPOR!</strong></button>
-                </a>
+                href="/darurat"
+                style={{ textDecoration: 'none', color: 'white' }}
+              >
+                {' '}
+                <button className="btn-custom-danger">
+                  <strong>LAPOR!</strong>
+                </button>
+              </a>
             </div>
             <div className="col-md-6 col-sm-7 right-hero">
               <div className="box d-flex justify-content-center align-items-center">
@@ -80,12 +96,16 @@ const Home = () => {
                   <hr className="hr-peringatan" />
                   <div className="p-3 fs-6">
                     <b style={{ fontFamily: 'Inter' }}>
-                      18 Februari 2023 | Laguboti
+                      {new Date(peringatanDini.tanggal).toLocaleDateString(
+                        'id-ID',
+                        {
+                          dateStyle: 'full',
+                        }
+                      )}{' '}
+                      | {peringatanDini.lokasi}
                     </b>
-                    <p style={{ fontFamily: 'Inter' }}>
-                      Waspada potensi hujan sedang hingga lebat disertai
-                      kilat/petir dan angin kencang pada sore hingga dini hari
-                      di wilayah laguboti Sitoluama dan Sekitarnya.
+                    <p style={{ fontFamily: 'Inter' }} className="mt-3">
+                      {peringatanDini.deskripsi}
                     </p>
                   </div>
                 </div>
