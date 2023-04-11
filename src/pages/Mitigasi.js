@@ -63,9 +63,11 @@ function Mitigasi() {
                       {report.attributes.deskripsi}
                     </p>
                     <div className="card-footer">
-                    <Link to={`mitigasi/${report.id}`}>
+
+                      <Link to={`mitigasi/${report.id}`}>
                         <p>Tinjau Edukasi</p>
                       </Link>
+
 
                     </div>
                   </div>
@@ -107,7 +109,6 @@ function Mitigasi() {
                       </p>
                     </div>
                     <div className="card-footer">
-
                       <Link to={`mitigasi/${report.id}`}>
                         <p>Tinjau Edukasi</p>
                       </Link>

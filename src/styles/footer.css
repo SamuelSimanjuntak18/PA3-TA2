@@ -52,3 +52,10 @@
     color: #FE9705;
 }
 
+.col-lg-2 p{
+    text-decoration: none;
+    line-height: 2.5;
+    font-size: 14px;
+    color: #ffffff;
+}
+

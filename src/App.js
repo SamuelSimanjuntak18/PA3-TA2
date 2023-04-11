@@ -12,13 +12,13 @@ import login from './pages/login';
 import register from './pages/register.jsx';
 // import Report from './pages/Report.jsx';
 import darurat from '../src/pages/darurat.jsx';
-import Detail_Laporan from './pages/Detail_Laporan';
+import Detail_Laporan from './pages/Detail_Laporan.jsx';
 import Footer from '../src/components/Footer';
-import laporanSelesai from './pages/laporanSelesai';
-import Pengumuman from './pages/Pengumuman';
+import laporanSelesai from './pages/laporanSelesai.jsx';
+import Pengumuman from './pages/Pengumuman.jsx';
 import ReportDetail from './pages/ReportDetail';
 import { SkeletonTheme } from 'react-loading-skeleton';
-import MitigasiDetail from './pages/MitigasiDetail';
+import MitigasiDetail from './pages/MitigasiDetail.jsx';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
         <div className="app-header">
-          <NavbarComponent isLoggedIn={isLoggedIn}/>
+          <NavbarComponent isLoggedIn={isLoggedIn} />
         </div>
         <Router>
           <Switch>

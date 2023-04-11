@@ -44,7 +44,8 @@ const Footer = () => {
                 <a href="#">Email</a>
               </li>
               <li>
-                <a href="#">Hak Cipta oleh BPBD Kabupaten Toba</a>
+                {/* <a href="#">Hak Cipta oleh BPBD Kabupaten Toba</a> */}
+                <p>Hak Cipta oleh BPBD Kabupaten Toba</p>
               </li>
             </ul>
           </div>

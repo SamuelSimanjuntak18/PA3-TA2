@@ -50,3 +50,8 @@
 .button-urgent:last-child {
     background-color: #FA0000;
 }
+
+.card-footer Link{
+    text-decoration: none;
+
+}

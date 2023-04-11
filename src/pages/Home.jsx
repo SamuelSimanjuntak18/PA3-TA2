@@ -141,14 +141,14 @@ const Home = () => {
                             item.name === 'Hujan Lebat'
                               ? HujanLebatImage
                               : item.name === 'Kabut'
-                              ? KabutImage
-                              : item.name === 'Berawan'
-                              ? BerawanImage
-                              : item.name === 'Hujan Ringan'
-                              ? HujanImage
-                              : item.name === 'Hujan Sedang'
-                              ? HujanSedangImage
-                              : ''
+                                ? KabutImage
+                                : item.name === 'Berawan'
+                                  ? BerawanImage
+                                  : item.name === 'Hujan Ringan'
+                                    ? HujanImage
+                                    : item.name === 'Hujan Sedang'
+                                      ? HujanSedangImage
+                                      : ''
                           }
                           alt=""
                         />
@@ -182,7 +182,7 @@ const Home = () => {
                       className="card-img-top"
                       alt="..."
                     />
-                    <div className="card-body">
+                    <div className="card-body text-start">
                       <h5 className="card-title">Card title</h5>
                       <h6 className="card-subtitle mb-2 text-muted ">
                         Card subtitle
@@ -254,7 +254,7 @@ const Home = () => {
                       className="card-img-top"
                       alt="..."
                     />
-                    <div className="card-body">
+                    <div className="card-body text-start">
                       <h5 className="card-title">Card title</h5>
                       <h6 className="card-subtitle mb-2 text-muted ">
                         Card subtitle
@@ -287,7 +287,7 @@ const Home = () => {
                       className="card-img-top"
                       alt="..."
                     />
-                    <div className="card-body">
+                    <div className="card-body text-start">
                       <h5 className="card-title">Card title</h5>
                       <h6 className="card-subtitle mb-2 text-muted ">
                         Card subtitle
