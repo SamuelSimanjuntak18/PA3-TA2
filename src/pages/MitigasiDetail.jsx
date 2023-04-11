@@ -36,13 +36,20 @@ const MitigasiDetail = () => {
                 <p>Buku Panduan Edukasi Kebencanaan</p>
                 <p className='fw-bold fs-3'>{mitigasi.title}</p>
                 <p className='fs-6'>{new Date(
-                              mitigasi.created_at
-                            ).toLocaleDateString('id-ID', {
-                              dateStyle: 'full',
-                            })}</p>
+                    mitigasi.created_at
+                ).toLocaleDateString('id-ID', {
+                    dateStyle: 'full',
+                })}</p>
             </div>
             <div>
-                <iframe src={`http://localhost:8000/mitigasi/${mitigasi.file}`} width={500} height={500} style={{ width: '100%' }}></iframe>
+                {mitigasi.jenis_konten === 'pdf' ? (
+                    <iframe src={`http://localhost:8000/mitigasi/${mitigasi.file}`} width={500} height={500} style={{ width: '100%' }}></iframe>
+                ) : (
+                    <video controls className="w-100">
+                        <source src={`http://localhost:8000/mitigasi/${mitigasi.file}`} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
             </div>
         </div>
     )
