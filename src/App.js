@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { NavbarComponent } from './components/NavbarComponent';
@@ -23,11 +23,19 @@ import { SkeletonTheme } from 'react-loading-skeleton';
 // import PrivateRoute from "utils/PrivateRoute";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token') ?? null;
+
+    setIsLoggedIn(token ? true : false);
+  })
+
   return (
     <div className="App">
       <SkeletonTheme baseColor="#313131" highlightColor="#525252">
         <div className="app-header">
-          <NavbarComponent />
+          <NavbarComponent isLoggedIn={isLoggedIn}/>
         </div>
         <Router>
           <Switch>
