@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import BanjirImage from '../assets/images/banjir.jpg';
@@ -114,27 +113,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container">
-        <div className="col-md-12">
-          <div className="box d-flex justify-content-center align-items-center">
-            <div className="peringatan-dini text-white">
-              <FontAwesomeIcon
-                icon={faTriangleExclamation}
-                className="warning-icon"
-              />
-              <hr className="hr-peringatan" />
-              <div className="p-3 fs-6">
-                <b>18 Februari 2023 | Laguboti</b>
-                <p>
-                  Waspada potensi hujan sedang hingga lebat disertai kilat/petir
-                  dan angin kencang pada sore hingga dini hari di wilayah
-                  laguboti Sitoluama dan Sekitarnya.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <section className="bg-blue p-1 text-white">
         <div className="container mt-5 mb-5">
           <div className="row">
