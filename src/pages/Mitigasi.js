@@ -4,6 +4,7 @@ import EdukasiGempa from '../assets/images/edukasi gempa.png';
 import PeringatanDini from '../assets/images/peringatan dini.png';
 import '../styles/mitigasi.css';
 import { instance } from '../apis/axios';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Mitigasi() {
   const [reports, setReports] = useState([]);
@@ -18,6 +19,10 @@ function Mitigasi() {
         console.log(error);
       });
   }, []);
+
+
+  console.log(reports);
+
   return (
 
     <div className="position-relative">
@@ -58,7 +63,10 @@ function Mitigasi() {
                       {report.attributes.deskripsi}
                     </p>
                     <div className="card-footer">
-                      <p>Tinjau Edukasi</p>
+                    <Link to={`mitigasi/${report.id}`}>
+                        <p>Tinjau Edukasi</p>
+                      </Link>
+
                     </div>
                   </div>
                 </div>
@@ -82,9 +90,11 @@ function Mitigasi() {
             {reports ? (
               reports.filter(report => report.attributes.file.includes('.mp4')).slice(0, 3).map((report) => (
                 <div className="col-md-3">
-                  <div className="card mx-auto">
 
-                    <video controls>
+                  <div className="card mx-auto p-0">
+
+                    <video>
+
                       <source src={`http://localhost:8000/mitigasi/${report.attributes.file}`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -97,7 +107,10 @@ function Mitigasi() {
                       </p>
                     </div>
                     <div className="card-footer">
-                      <p>Tinjau Edukasi</p>
+
+                      <Link to={`mitigasi/${report.id}`}>
+                        <p>Tinjau Edukasi</p>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 
 
 
-export const NavbarComponent = () => {
+export const NavbarComponent = ({ isLoggedIn }) => {
+  
+  const logout = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('user_data')
+    window.location.reload();
+  }
+
+
   return (
     <Navbar variant="dark" expand="lg">
       <Container>
@@ -44,8 +52,11 @@ export const NavbarComponent = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="Profil">Profil</Nav.Link>
-            <Nav.Link href="login">Masuk</Nav.Link>
-    
+            {isLoggedIn ? (
+              <Nav.Link href="#" onClick={logout}>Logout</Nav.Link>
+              ) : (
+              <Nav.Link href="login">Masuk</Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

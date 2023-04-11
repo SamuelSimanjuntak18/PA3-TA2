@@ -34,7 +34,7 @@ function Login() {
     const response = await login({ email: username, password: password });
     console.log(response === 200);
     if (response === 200) {
-      history.push("/");
+      window.location.reload();
       setIsLoading(false);
     }
   };
