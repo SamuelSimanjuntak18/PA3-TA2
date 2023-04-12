@@ -94,7 +94,7 @@ const Home = () => {
                   />
                   <hr className="hr-peringatan" />
                   <div className="p-3 fs-6">
-                    <b style={{ fontFamily: 'Inter' }}>
+                    <b>
                       {new Date(peringatanDini.tanggal).toLocaleDateString(
                         'id-ID',
                         {
@@ -103,7 +103,7 @@ const Home = () => {
                       )}{' '}
                       | {peringatanDini.lokasi}
                     </b>
-                    <p style={{ fontFamily: 'Inter' }} className="mt-3">
+                    <p className="mt-3">
                       {peringatanDini.deskripsi}
                     </p>
                   </div>
