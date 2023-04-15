@@ -54,5 +54,4 @@ const MitigasiDetail = () => {
         </div>
     )
 }
-
 export default MitigasiDetail

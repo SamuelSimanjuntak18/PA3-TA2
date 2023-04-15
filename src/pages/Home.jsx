@@ -10,7 +10,7 @@ import HujanLebatImage from '../assets/images/hujan_lebat.png';
 import HujanSedangImage from '../assets/images/hujan_sedang.png';
 import '../styles/Home.css';
 import NewestReport from '../components/NewestReport';
-import { instance } from 'apis/axios';
+import { instance } from '../apis/axios';
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -19,6 +19,7 @@ const Home = () => {
 
   const [peringatanDini, setPeringatanDini] = useState([]);
 
+  
   const fetchData = async () => {
     const response = await fetch(
       'https://cuaca-gempa-rest-api.vercel.app/weather/sumatera-utara/balige'
@@ -29,7 +30,6 @@ const Home = () => {
 
     setWeatherDesc(data.data.params.filter((item) => item.id === 'weather')[0]);
   };
-
   useEffect(() => {
     fetchData();
     instance

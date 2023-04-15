@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -53,7 +55,10 @@ export const NavbarComponent = ({ isLoggedIn }) => {
             </NavDropdown>
             <Nav.Link href="Profil">Profil</Nav.Link>
             {isLoggedIn ? (
-              <Nav.Link href="#" onClick={logout}>Logout</Nav.Link>
+             <Nav.Link href="#" onClick={logout}>
+             <FontAwesomeIcon icon={faSignOutAlt} /> Keluar
+           </Nav.Link>
+           
               ) : (
               <Nav.Link href="login">Masuk</Nav.Link>
             )}

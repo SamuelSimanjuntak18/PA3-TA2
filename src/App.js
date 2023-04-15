@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavbarComponent } from './components/NavbarComponent';
+import NavbarComponent from '../src/components/NavbarComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 // import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Mitigasi from './pages/Mitigasi';
+import Mitigasi from './pages/Mitigasi.jsx';
 import Home from './pages/Home.jsx';
 import login from './pages/login';
 import register from './pages/register.jsx';
@@ -19,6 +19,10 @@ import Pengumuman from './pages/Pengumuman';
 import ReportDetail from './pages/ReportDetail';
 import { SkeletonTheme } from 'react-loading-skeleton';
 import MitigasiDetail from './pages/MitigasiDetail';
+import BencanaAlam from './pages/BencanaAlam';
+import BencanaSosial from './pages/BencanaSosial';
+import BencanaNonAlam from './pages/BencanaNonAlam';
+import Profil from './pages/Profil';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -49,7 +53,11 @@ function App() {
               <Route path="/laporanSelesai" exact component={laporanSelesai} />
               <Route path="/Pengumuman" exact component={Pengumuman} />
               <Route path="/reports/:id" component={ReportDetail} />
-            </div>
+              <Route path="/BencanaAlam" component={BencanaAlam} />
+              <Route path="/BencanaNonAlam" component={BencanaNonAlam} />
+              <Route path="/BencanaSosial" component={BencanaSosial} />
+              <Route path="/Profil" component={Profil} />        
+                  </div>
 
             {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}
           </Switch>
