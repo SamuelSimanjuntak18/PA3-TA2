@@ -108,7 +108,7 @@ export default function Profil() {
                   <div className="trapezoid">
                     <h6
                       style={{
-                        color: "white",
+                        color: "black",
                         position: "absolute",
                         top: "-50px",
                       }}
@@ -155,7 +155,7 @@ export default function Profil() {
                   <div className="trapezoid">
                     <h6
                       style={{
-                        color: "white",
+                        color: "black",
                         position: "absolute",
                         top: "-50px",
                       }}
@@ -199,7 +199,7 @@ export default function Profil() {
                   <div className="trapezoid">
                     <h6
                       style={{
-                        color: "white",
+                        color: "black",
                         position: "absolute",
                         top: "-50px",
                       }}
@@ -243,7 +243,7 @@ export default function Profil() {
                   <div className="trapezoid">
                     <h6
                       style={{
-                        color: "white",
+                        color: "black",
                         position: "absolute",
                         top: "-50px",
                       }}
