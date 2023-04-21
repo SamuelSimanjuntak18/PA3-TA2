@@ -72,7 +72,7 @@
 }
 
 
-.cuaca-box {
+/* .cuaca-box {
   animation: carousel 10s infinite;
 }
 
@@ -86,7 +86,7 @@
   100% {
     transform: translateX(0);
   }
-}
+} */
 .col-md-4 img{
   width: 100%;
   height: 250px;

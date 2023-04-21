@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
 
-const Cuaca = ({ title, description }) => {
+const DetailLaporan = ({ title, description }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleCloseModal = () => {
@@ -15,7 +15,7 @@ const Cuaca = ({ title, description }) => {
   return (
     <div className="container">
       <div className="row container">
-        <div className="col-md-4 container py-2">
+          <div className="col-md-4 container py-2">
           <br />
           <Card style={{ width: '18rem' }}>
             <img src="/assets/images/banjirr.jpg" alt="Logo Kebencanaan" />
@@ -212,4 +212,4 @@ const Cuaca = ({ title, description }) => {
   );
 };
 
-export default Cuaca;
+export default DetailLaporan;
