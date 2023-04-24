@@ -2,14 +2,10 @@
   margin-bottom: 1rem;
   text-align: left;
   font-size: 16px;
-  
-
-  
-
 }
 
-@media(max-width: 670px){
-  .submit{
+@media (max-width: 670px) {
+  .submit {
     background-color: red;
   }
 }
@@ -17,8 +13,6 @@
 label {
   display: block;
   margin-bottom: 0.5rem;
- 
-  
 }
 
 input[type="text"],
@@ -40,7 +34,7 @@ button[type="submit"] {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #0B8F00;
+  background-color: #0b8f00;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
@@ -48,7 +42,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0B8F00;
+  background-color: #0b8f00;
 }
 
 fieldset {
@@ -56,9 +50,10 @@ fieldset {
   border-radius: 0.25rem;
   padding: 1rem;
   margin-bottom: 1rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 10px;
-  font-family: 'Roboto';font-size: 10px;
+  font-family: "Roboto";
+  font-size: 10px;
 }
 
 .garis {
@@ -67,26 +62,24 @@ fieldset {
 }
 
 .darurat {
-  background-color: #FA0000;
+  background-color: #fa0000;
   color: #fff;
   border: none;
   width: 250px;
   height: 60px;
   font-size: 24px;
   margin-right: 20%;
-
 }
 
 .card {
   background-color: #fff;
-  box-shadow: 0px  4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 35px;
 }
 
 .damkar {
   width: 250px;
   position: static;
-
 }
 
 /* .judul {
@@ -105,18 +98,19 @@ fieldset {
   color: #000000;
 } */
 
-.posisiform{
+.posisiform {
   margin-top: -50%;
-  
 }
-.report{
-  background-color: #0255A5;
+
+.report {
+  background-color: #0255a5;
 }
+
 .media {
   display: flex;
   align-items: center;
-  }
-  
-  .media-body {
+}
+
+.media-body {
   flex: 1;
-  }
+}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { instance } from '../apis/axios';
+import React, { useState, useEffect } from "react";
+import { instance } from "../apis/axios";
 
 function ReportDetail(props) {
   const [report, setReport] = useState(null);
@@ -28,20 +28,20 @@ function ReportDetail(props) {
           <center>
             <div
               className="panel panel-default 1px"
-              style={{ textAlign: 'left', margin: '40px', width: '80%' }}
+              style={{ textAlign: "left", margin: "40px", width: "80%" }}
             >
               <div className="panel-body">
                 <div className="tab-content">
                   <div
                     className="card card-default"
                     style={{
-                      boxShadow: 'inset 1px 1px -2px white',
-                      backgroundColor: 'white',
+                      boxShadow: "inset 1px 1px -2px white",
+                      backgroundColor: "white",
                     }}
                   >
                     <div
                       className="card-body"
-                      style={{ fontFamily: 'Roboto', fontWeight: '200' }}
+                      style={{ fontFamily: "Roboto", fontWeight: "200" }}
                     >
                       <div className="row">
                         <div className="col-8">
@@ -49,8 +49,8 @@ function ReportDetail(props) {
                           <p>
                             {new Date(
                               report.attributes.created_at
-                            ).toLocaleDateString('id-ID', {
-                              dateStyle: 'full',
+                            ).toLocaleDateString("id-ID", {
+                              dateStyle: "full",
                             })}
                           </p>
                           <p>Lokasi</p>
@@ -74,18 +74,18 @@ function ReportDetail(props) {
                 </div>
               </div>
             </div>
-          </center>{' '}
+          </center>{" "}
           <br />
-          <h4 style={{ textAlign: 'left', margin: '40px' }}>
-            {' '}
+          <h4 style={{ textAlign: "left", margin: "40px" }}>
+            {" "}
             Data Korban Jiwa
           </h4>
-          <hr style={{ textAlign: 'left', margin: '40px' }} />
+          <hr style={{ textAlign: "left", margin: "40px" }} />
           <div className="card-body">
             <div className="pl-4 pr-4 pt-0 pb-0">
               <table
                 className="table table-striped table-hover table-compact table-bordered"
-                style={{ textAlign: 'left', margin: '40px' }}
+                style={{ textAlign: "left", margin: "40px" }}
               >
                 <tbody>
                   <tr>
@@ -166,23 +166,23 @@ function ReportDetail(props) {
             </div>
           </div>
           <br />
-          <h4 style={{ textAlign: 'left', margin: '40px' }}>
+          <h4 style={{ textAlign: "left", margin: "40px" }}>
             Kerusakan Infrastruktur
           </h4>
-          <hr style={{ textAlign: 'left', margin: '40px' }} />
+          <hr style={{ textAlign: "left", margin: "40px" }} />
           <div className="card-body">
             <div className="pl-4 pr-4 pt-0 pb-0">
               <table
                 className="table table-striped table-hover table-compact table-bordered"
-                style={{ textAlign: 'left', margin: '40px' }}
+                style={{ textAlign: "left", margin: "40px" }}
               >
                 <tbody>
                   <tr>
                     <th rowspan="2">Nama Infrastruktur</th>
-                    <th colspan="2" style={{ textAlign: 'center' }}>
+                    <th colspan="2" style={{ textAlign: "center" }}>
                       Rusak
                     </th>
-                    <th rowspan="2" style={{ textAlign: 'center' }}>
+                    <th rowspan="2" style={{ textAlign: "center" }}>
                       Jumlah
                     </th>
                   </tr>
@@ -237,16 +237,16 @@ function ReportDetail(props) {
           </div>
           <div
             className="card card-default"
-            style={{ boxShadow: 'inset 1px 1px 10px #888' }}
+            style={{ boxShadow: "inset 1px 1px 10px #888" }}
           >
             <div className="card-header">
-              <span style={{ fontSize: '13pt', textAlign: 'left' }}>
+              <span style={{ fontSize: "13pt", textAlign: "left" }}>
                 <h4>Upaya</h4>
               </span>
               <div className="card-tools text-right"></div>
             </div>
             <br />
-            <h4 style={{ textAlign: 'left', margin: '40px' }}>
+            <h4 style={{ textAlign: "left", margin: "40px" }}>
               Membagikan bantuan makanan dan air bersih kepada pengungsi
             </h4>
           </div>
