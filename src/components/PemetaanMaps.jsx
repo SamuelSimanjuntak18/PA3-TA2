@@ -18,7 +18,8 @@ function PemetaanMaps() {
       style={{ height: '350px', width: '100%' }}
     >
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyD_lX5Kf_oGH_rBt6gj-e4zH_-Xb90Qk7M' }}
+        bootstrapURLKeys={{ key: 'AIzaSyCnVD8EkfvSTD4s-p_EX7BV-f5LUdeG4es' }}
+        
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
